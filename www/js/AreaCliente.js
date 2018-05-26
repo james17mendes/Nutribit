@@ -23,6 +23,7 @@
         console.log("Logout...")
         localStorage.removeItem("currentUser");
         window.location = "home.html";
+        console.log("teste");
 
     });
 
