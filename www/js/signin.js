@@ -7,6 +7,9 @@
         this.company = company;
         this.email = email;
         this.password = password;
+        this.address = null;
+        this.postaCode = null;
+        this.phone = null;
         console.log("Creating a new person...")
     }
 

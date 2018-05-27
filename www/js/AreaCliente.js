@@ -7,6 +7,9 @@
         this.company = company;
         this.email = email;
         this.password = password;
+        this.address = null;
+        this.postaCode = null;
+        this.phone = null;
         console.log("Creating a new person...")
     }
 
@@ -19,11 +22,12 @@
     console.log("Email: " + currentUser.email);
     console.log("Password: " + currentUser.password);
 
+    $("#nome").html("" + currentUser.name);
+
     $("#sair").click(function () {
         console.log("Logout...")
         localStorage.removeItem("currentUser");
         window.location = "home.html";
-        console.log("teste");
 
     });
 

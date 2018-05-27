@@ -23,6 +23,14 @@
 
 	<style>
 
+        .aparece {
+            display: inline-block;
+        }
+
+        .desaparece {
+            display: none;
+        }
+
 				html {
 					margin: 0;
 					height: 100%;
@@ -275,41 +283,42 @@
 	</div>
 
 	<div class="col-lg-6">
-		<h3 style="color:forestgreen" class="col-lg-11 col-lg-offset-1"><u>Informações Básicas</u></h3>
+		<h3 style="color:forestgreen" class="col-lg-11 col-lg-offset-1">Informações Básicas</h3>
 		<img src="images/sad.png"  style="width:200px;border:3px solid forestgreen;padding:0;margin-left:85px"  alt="Avatar" class="col-lg-4 col-lg-offset-1">
-
+        <button style="background-color:dodgerblue;color:white;margin-left:110px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">Alterar foto</button>
 		<div class="col-lg-6 col-lg-offset-1">
 			<table class="table borderless">
 				
 				<tbody style="font-size:20px">
 					<tr>
 						<th scope="row" style="border:none" class="title">Nome:</th>
-						<td style="border:none">Tiago Mendes</td>
-						
+						<td id="l1" class="aparece" style="border:none"></td>
+                        <td><input id="i1" class="desaparece"></td>
 					</tr>
 					<tr>
 						<th scope="row" class="title" style="border:none">Email:</th>
-						<td style="border:none">mendes@ua.pt</td>
+                        <td id="l2" class="aparece" style="border:none"></td>
+                        <td><input id="i2" class="desaparece"></td>
 					</tr>
 					<tr>
 						<th scope="row" class="title" style="border:none">Empresa:</th>
-						<td style="border:none"></td>
-						
+                        <td id="l3" class="aparece" style="border:none"></td>
+                        <td><input id="i3" class="desaparece"></td>
 					</tr>
 					<tr>
 						<th scope="row" class="title" style="border:none">Morada</th>
-						<td style="border:none">Aveiro</td>
-
+                        <td id="l4" class="aparece" style="border:none"></td>
+                        <td><input id="i4" class="desaparece"></td>
 					</tr>
 					<tr>
 						<th scope="row" class="title" style="border:none">Código postal:</th>
-						<td style="border:none">3800-000</td>
-
+                        <td id="l5" class="aparece" style="border:none"></td>
+                        <td><input id="i5" class="desaparece"></td>
 					</tr>
 					<tr>
 						<th scope="row" class="title" style="border:none">Telemóvel:</th>
-						<td style="border:none">931654789</td>
-
+                        <td id="l6" class="aparece" style="border:none"></td>
+                        <td><input id="i6" class="desaparece"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -318,17 +327,8 @@
 
 
 		</div>
-
 		<div class="col-lg-6">
-			<button style="background-color:dodgerblue;color:white;margin-left:110px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Alterar foto
-			</button>
-
-		</div >
-		<div class="col-lg-6">
-			<button style="background-color:dodgerblue;color:white;margin-left:50px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Editar perfil
-			</button>
+			<button id="editarP" style="background-color:dodgerblue;color:white; margin-left:50px;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">Editar perfil</button>
 
 		</div>
 	</div>
@@ -372,6 +372,7 @@
 
 
 	<script type="text/javascript" src="cordova.js"></script>
+    <script src="js/perfil.js"></script>
 
 
 

@@ -27,11 +27,14 @@
                  this.company = company;
                  this.email = email;
                  this.password = password;
+                 this.address = null;
+                 this.postaCode = null;
+                 this.phone = null;
                  console.log("Creating a new person...")
              }
 
              var users = new Array; // Array para guardar todos os utilizadores
-             users.push(new Person("Pessoa teste", "Companhia teste", "Email teste", "Passwordteste")); // Adicionar um utilizador teste
+             users.push(new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789")); // Adicionar um utilizador teste
              localStorage.setItem('users', JSON.stringify(users)); // Guardar o array no localStorage
              console.log("User test added to localStorage");
 
