@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+    <style>
+        html {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow: scroll;
+        }
+
+        ul.dropdown-cart {
+            min-width: 250px;
+        }
+
+            ul.dropdown-cart li .item {
+                display: block;
+                padding: 3px 10px;
+                margin: 3px 0;
+            }
+
+                ul.dropdown-cart li .item:hover {
+                    background-color: #f3f3f3;
+                }
+
+                ul.dropdown-cart li .item:after {
+                    visibility: hidden;
+                    display: block;
+                    font-size: 0;
+                    content: " ";
+                    clear: both;
+                    height: 0;
+                }
+
+            ul.dropdown-cart li .item-left {
+                float: left;
+            }
+
+                ul.dropdown-cart li .item-left img,
+                ul.dropdown-cart li .item-left span.item-info {
+                    float: left;
+                }
+
+                ul.dropdown-cart li .item-left span.item-info {
+                    margin-left: 10px;
+                }
+
+                    ul.dropdown-cart li .item-left span.item-info span {
+                        display: block;
+                    }
+
+            ul.dropdown-cart li .item-right {
+                float: right;
+            }
+
+                ul.dropdown-cart li .item-right button {
+                    margin-top: 14px;
+                }
+
+
+
+        .avatar {
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .navbar-default {
+            background-color: forestgreen;
+        }
+
+        .blackbox {
+            background-color: #404040;
+            margin-top: 20px;
+        }
+
+        .greenbox {
+            background-color: forestgreen;
+            margin-top: 20px;
+        }
+
+        .fa1 {
+            font-size: 130px;
+        }
+
+        .effect:hover {
+            opacity: 0.9;
+            transform: scale(1.1)
+        }
+
+        .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+            background-color: transparent
+        }
+
+        .div1 {
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 10%;
+        }
+
+        @media screen and (max-width: 600px) {
+            .div1 {
+                margin-top: 60%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .div2 {
+                margin-top: 10%;
+            }
+        }
+
+       
+    </style>
+
+    <nav class="navbar  navbar-fixed-top" style="background-color:forestgreen;position:relative;margin-bottom:0px">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button style="border-color:blue" type="button" class="navbar-toggle  navbar-dark collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only ">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+
+
+
+
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+
+
+
+                        <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                            </li>
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px;transition:0.3s;"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
+                        <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="item">
+                                    <span class="item-left">
+                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                        <span class="item-info">
+                                            <span>Item name</span>
+                                            <span>23$</span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a class="text-center" href="">View Cart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li style="margin-top:15px">
+                        <span style="color:white;font-size:20px">100 bits</span>
+                        <img style="width:50px" src="images/logo3.png">
+                    </li>
+
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="container col-lg-12" style="background-color:forestgreen;float:left;color:white;position:relative;width:100%">
+        <h2 class="col-lg-10"> Área do administrador</h2>
+        <span class="col-lg-2" style="font-size:40px;color:white;"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="index.html" style="color:white;text-decoration:none">Voltar</a></span>
+    </div>
+
+    <div class="container col-lg-12">
+        <div class="col-lg-3 col-lg-offset-2 blackbox effect div1 " style="">
+            <a href="Refeicoes_admin.html" style="color:white"><i class="fa fa-cutlery fa1" aria-hidden="true"></i><h5 class="col-lg-12">Menus</h5></a>
+        </div>
+        <div class="col-lg-3 col-lg-offset-2 blackbox  effect div2" style="text-align:center;border-radius:20px;margin-top:10%">
+            <a href="" style="color:white"><i class="fa fa-commenting fa1" onclick="location.href='Feedback_admin.html'" aria-hidden="true"></i><h5 class="col-lg-12">Feedback</h5></a>
+        </div>
+       
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+
+</body>
+</html>

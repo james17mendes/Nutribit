@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+
+<html >
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+       
+        <title></title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100%;
+            }
+
+
+            html {
+                height: 100%
+            }
+
+
+
+            div#Wrapper {
+                height: 100%;
+                min-height: 100%;
+                background-color: forestgreen;
+                padding-bottom: 180px;
+            
+                
+
+            }
+
+            /* Use a media query to add a breakpoint at 800px: */
+            
+
+
+            form {
+                border: 3px solid #f1f1f1;
+            }
+
+            input[type=text], input[type=password],select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+           
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+                button:hover {
+                    opacity: 0.8;
+                }
+
+            .button1 {
+                background-color: gray;
+                color: white;
+                margin-top: 20px;
+                border: none;
+                cursor: pointer;
+                width: 5%;
+                border-radius: 20px 20px;
+                padding: 10px;
+                text-align: center;
+            }
+
+                .button1:hover {
+                    opacity: 0.8;
+                }
+
+
+
+            .button2 {
+                background-color: white;
+                color: green;
+                margin-top: 20px;
+                border: none;
+                cursor: pointer;
+                width: 30%;
+                padding: 10px;
+                text-align: center;
+            }
+
+                .button2:hover {
+                    opacity: 0.8;
+                }
+
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            .imgcontainer {
+                text-align: center;
+                margin: 0px 0 0px 0;
+            }
+
+            img.avatar {
+                width: 50%;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            span.psw {
+                float: right;
+                padding: 0px;
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
+        </style>
+
+        <section>
+
+
+
+            <div class="col-lg-6" style="height:100%">
+                <div>
+                    <h4 class="col-lg-8 col-lg-offset-2" style="color:forestgreen;text-align:center">Registe-se e sê saudável!</h4>
+                    <a href="index.html" class="button1 col-lg-2">&#10006</a>
+                    <h5 class="col-lg-12" style="text-align:center">Com a Nutribit, o céu é o limite.</h5>
+
+                </div>
+
+
+                <form action="/action_page.php">
+                    <div class="imgcontainer">
+                        <img src="images/Logo.jpg" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container col-lg-12">
+
+                        <label for="Nome"><i style="color:forestgreen" class="fa fa-users" aria-hidden="true"></i><b> Nome Completo</b></label>
+                        <input type="text" placeholder="Insira Nome" name="uname" required>
+
+
+                        <label for="Nome"><i style="color:forestgreen" class="fa fa-users" aria-hidden="true"></i><b> Tipo de conta:</b></label>
+                        <select>
+                            <option value="cli">Cliente</option>
+                            <option value="rest">Restaurante</option>
+                            <option value="est">Estafeta</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+
+                        <label for="Empresa"><i style="color:forestgreen" class="fa fa-building-o" aria-hidden="true"></i><b> Empresa (Opcional)</b></label>
+                        <input type="text" placeholder="Insira o nome da empresa" name="uname" required>
+
+                        <label for="uname"><i style="color:forestgreen" class="fa fa-envelope" aria-hidden="true"></i><b> Email</b></label>
+                        <input type="text" placeholder="Inisra o email" name="uname" required>
+
+
+
+
+                        <label for="psw"><i style="color:forestgreen" class="fa fa-lock"></i> <b>Password</b></label>
+                        <input type="password" placeholder="Insira a palavra-passe" name="psw" required>
+
+                        <label for="psw"><i style="color:forestgreen" class="fa fa-repeat"></i> <b>Confirmar Palavra-passe</b></label>
+                        <input type="password" placeholder="Insira a palavra-passe novamente" name="psw" required>
+
+
+
+                    </div>
+
+
+                    <button type="submit">Crie a sua conta grátis</button>
+
+                    <div class="container col-lg-12" style="padding-top:10px;text-align:center">
+
+                        <div style="margin:auto;display:table" class="psw">Ao criar a sua conta, está a aceitar os nossos <a href="https://drive.google.com/file/d/1FFJDUdCM1muFCUVa2zBfwf7Y1ev_-qnY/view?usp=sharing">Termos</a></div>
+                    </div>
+
+                    <div class="container col-lg-12" style="padding-top:10px;text-align:center">
+
+                        <div style="margin:auto;display:table" class="psw">Já tem uma conta?<a href="Login.html">Sign in</a></div>
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="col-lg-6 div1" id="Wrapper" style="text-align:center">
+                <img style="padding-top:150px;max-width:100%" src="images/PC.png">
+                <h3 style="color:white">Encomenda as refeições mais saudáveis de uma forma rápida e eficaz !</h3>
+
+                <button type="submit" class="button2" onclick="location.href='#AreaCliente'">Saiba Mais</button>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+    </body>
+</html>
