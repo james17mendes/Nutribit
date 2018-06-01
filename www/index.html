@@ -44,6 +44,12 @@
                  console.log("\nCreating a new sugestion...")
              }
 
+             // Construtor de um código
+             function Codigo(codigo, valor) {
+                 this.codigo = codigo;
+                 this.valor = valor;
+             }
+
              // Pessoa teste
              var p1 = new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789", "cli", 200, "dinheiro");
 
@@ -56,6 +62,18 @@
              sugestoes.push(new Sugestao("Primeira sugestao", p1)); // Adicionar uma sugestao teste
              localStorage.setItem('sugestions', JSON.stringify(sugestoes)); // Guardar o array no localStorage
              console.log("Sugestao teste added to localStorage");
+
+             // Codigos promocionais
+             var codigos = new Array;
+             codigos.push(new Codigo(123456,200));
+             codigos.push(new Codigo(617844,300));
+             codigos.push(new Codigo(847392,100));
+             codigos.push(new Codigo(104957,400));
+             codigos.push(new Codigo(184739,100));
+             codigos.push(new Codigo(182874,50));
+
+             localStorage.setItem('codigos', JSON.stringify(codigos));
+             console.log("Codigo adicionado ao localStorage!");
 
              window.location = "home.html";
          });

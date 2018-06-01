@@ -188,7 +188,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -203,26 +203,23 @@
 
 
 
-                        <a style="color:white;transition:0.5s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
                         <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -233,7 +230,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px;transition:0.5s"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
                         <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
                             <li>
                                 <span class="item">
@@ -249,58 +246,15 @@
                                     </span>
                                 </span>
                             </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
                             <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
+                        <span id="bits" style="color:white;font-size:20px"></span><span style="color:white;font-size:20px"> bits</span>
+                        <img style="width:40px" src="images/logo3.png">
                     </li>
 
 
@@ -324,16 +278,16 @@
     <div class="container fade col-lg-2 col-lg-offset-1 div2" style="">
         <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
         <a  data-toggle="modal" data-target="#modal1"  class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h6>Ingredientes:</h6>
         <ul>
-            <li><b>>Ingredientes:</b></li>
             <li>Frango</li>
             <li>Ananás</li>
             <li>Queijo</li>
             <li>Batata doce</li>
         </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h5 style="margin-left:20px">Preço: 6.50 €</h5>
         <div class="col-lg-12">
-            <button  style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='bebidas.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="menu1" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='bebidas.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher    
             </button>
 
@@ -341,18 +295,18 @@
 
     </div>
     <div class="container fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Tropical </h4>
+        <a data-toggle="modal" data-target="#modal2" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h6>Ingredientes:</h6>
         <ul>
-            <li><b>>Ingredientes:</b></li>
             <li>Frango</li>
             <li>Ananás</li>
             <li>Queijo</li>
-            <li>Batata doce</li>
+            <li>Pêssego</li>
         </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h5 style="margin-left:20px">Preço: 6.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="menu2" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -360,18 +314,19 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Havaiana </h4>
+        <a data-toggle="modal" data-target="#modal3" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h6>Ingredientes:</h6>
         <ul>
-            <li><b>>Ingredientes:</b></li>
-            <li>Frango</li>
-            <li>Ananás</li>
-            <li>Queijo</li>
-            <li>Batata doce</li>
+            <li>Atum</li>
+            <li>Camarão</li>
+            <li>Cenoura</li>
+            <li>Tomate</li>
+            <li>Abacaxi</li>
         </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h5 style="margin-left:20px">Preço: 7.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="menu3" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -379,18 +334,19 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2"  style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Frutas </h4>
+        <a data-toggle="modal" data-target="#modal4" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h6>Ingredientes:</h6>
         <ul>
-            <li><b>>Ingredientes:</b></li>
             <li>Frango</li>
-            <li>Ananás</li>
+            <li>Kiwi</li>
             <li>Queijo</li>
-            <li>Batata doce</li>
+            <li>Abacaxi</li>
+            <li>Laranja</li>
         </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h5 style="margin-left:20px">Preço: 7.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="menu4" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -412,15 +368,15 @@
                 <div class="modal-body">
                     <img  style="width:100%"  src="images/frango.jpg">
                     <div style="margin-top:20px" id="descrição" >
-                        <h8>Frango saudável com batata doce</h8>
+                        <h8><b>Descrição: </b>Frango saudável com batata doce</h8>
                     </div>
                     <h6>Ingredientes</h6>
-                    <div class="form-check  col-lg-12 ">
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Frango<br >
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Anánas<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Queijo<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Batata Doce<br>  
-                    </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Frango</a>
+                            <a href="#" class="list-group-item">Ananás</a>
+                            <a href="#" class="list-group-item">Queijo</a>
+                            <a href="#" class="list-group-item">Batata Doce</a>
+                        </div> 
                     <h6>Informação nutricional</h6>
                     <ul>
                         <li>Proteína: 40g</li>
@@ -429,18 +385,183 @@
                         <li>Fibra: 40g</li>
                         <li><b>Calorias:</b> 500 kcal </li>
                     </ul>
-                    <h6><b>Preço:</b> 6.50</h6>
+                    <h6><b>Preço:</b> 6.50 €</h6>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" onclick="location.href='bebidas.html'" class="btn btn-primary">Save changes</button>
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 meal-->
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tropical</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style="width:100%" src="images/frango.jpg">
+                    <div style="margin-top:20px" id="descrição">
+                        <h8><b>Descrição: </b>Frango saudável com ananás, queijo e pêssego</h8>
+                    </div>
+                    <h6>Ingredientes</h6>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Frango</a>
+                        <a href="#" class="list-group-item">Ananás</a>
+                        <a href="#" class="list-group-item">Queijo</a>
+                        <a href="#" class="list-group-item">Pêssego</a>
+                    </div>
+                    <h6>Informação nutricional</h6>
+                    <ul>
+                        <li>Proteína: 60g</li>
+                        <li>Gordura: 70g</li>
+                        <li>Hidratos de Carbono: 80g</li>
+                        <li>Fibra: 100g</li>
+                        <li><b>Calorias:</b> 450 kcal </li>
+                    </ul>
+                    <h6><b>Preço:</b> 6.50 €</h6>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 meal-->
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Havaiana</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style="width:100%" src="images/frango.jpg">
+                    <div style="margin-top:20px" id="descrição">
+                        <h8><b>Descrição: </b>Frango saudável com camarão</h8>
+                    </div>
+                    <h6>Ingredientes</h6>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Atum</a>
+                        <a href="#" class="list-group-item">Camarão</a>
+                        <a href="#" class="list-group-item">Cenoura</a>
+                        <a href="#" class="list-group-item">Tomate</a>
+                        <a href="#" class="list-group-item">Abacaxi</a>
+                    </div>
+                    <h6>Informação nutricional</h6>
+                    <ul>
+                        <li>Proteína: 40g</li>
+                        <li>Gordura: 20g</li>
+                        <li>Hidratos de Carbono: 50g</li>
+                        <li>Fibra: 60g</li>
+                        <li><b>Calorias:</b> 400 kcal </li>
+                    </ul>
+                    <h6><b>Preço:</b> 7.00 €</h6>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 meal-->
+    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Frutas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img style="width:100%" src="images/frango.jpg">
+                    <div style="margin-top:20px" id="descrição">
+                        <h8><b>Descrição: </b>Frango saudável com frutas variadas</h8>
+                    </div>
+                    <h6>Ingredientes</h6>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Frango</a>
+                        <a href="#" class="list-group-item">Kiwi</a>
+                        <a href="#" class="list-group-item">Queijo</a>
+                        <a href="#" class="list-group-item">Abacaxi</a>
+                        <a href="#" class="list-group-item">Laranja</a>
+                    </div>
+                    <h6>Informação nutricional</h6>
+                    <ul>
+                        <li>Proteína: 40g</li>
+                        <li>Gordura: 30g</li>
+                        <li>Hidratos de Carbono: 60g</li>
+                        <li>Fibra: 70g</li>
+                        <li><b>Calorias:</b> 600 kcal </li>
+                    </ul>
+                    <h6><b>Preço:</b> 7.00 €</h6>
+                </div>
+                <div class="modal-footer">
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        $(document).ready(function () {
 
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            $("#nome").html("" + currentUser.name);
+            $("#bits").html("" + currentUser.bits);
+
+            $("#close").click(function () {
+                $("#myModal").modal("hide");
+            });
+
+            function Menu(nome, ingredientes, preco) {
+                this.nome = nome;
+                this.ingredientes = ingredientes;
+                this.preco = preco;
+            }
+
+            var menus = new Array;
+
+            menus.push(new Menu("Frango Gain", ["Frango", "Ananás", "Queijo", "Batata Doce"], 6.50));
+            menus.push(new Menu("Tropical", ["Frango", "Ananás", "Queijo", "Pêssego"], 6.50));
+            menus.push(new Menu("Havaiana", ["Atum", "Camarão", "Cenoura", "Tomate", "Abacaxi"], 6.50));
+            menus.push(new Menu("Frutas", ["Frango", "Kiwi", "Queijo", "Abacaxi", "Laranja"], 6.50));
+
+           
+            $("#menu1").click(function () {
+                localStorage.setItem('currentMeal', JSON.stringify(menus[0]));
+                window.location = "bebidas.html";
+            });
+
+            $("#menu2").click(function () {
+                localStorage.setItem('currentMeal', JSON.stringify(menus[1]));
+                window.location = "bebidas.html";
+            });
+
+            $("#menu3").click(function () {
+                localStorage.setItem('currentMeal', JSON.stringify(menus[2]));
+                window.location = "bebidas.html";
+            });
+
+            $("#menu4").click(function () {
+                localStorage.setItem('currentMeal', JSON.stringify(menus[3]));
+                window.location = "bebidas.html";
+            });
+
+        });
+    </script>
 
 
 </body>

@@ -24,6 +24,15 @@
 
 
     <style>
+
+        .aparece {
+            display: inline-block;
+        }
+
+        .desaparece {
+            display: none;
+        }
+
         html {
             margin: 0;
             height: 100%;
@@ -161,7 +170,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -176,26 +185,23 @@
 
 
 
-                        <a style="color:white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
                         <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -272,8 +278,8 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
+                        <span id="bits" style="color:white;font-size:20px"></span><span style="color:white;font-size:20px"> bits</span>
+                        <img style="width:40px" src="images/logo3.png">
                     </li>
 
 
@@ -296,12 +302,12 @@
             </div>
             <h5 class="col-lg-12" style="text-align:center;margin-top:50px;margin-bottom:50px">Por favor, introduza aqui o seu código promocional:</h5>
 
-            <p><input class="w3-input ip1" type="text" style="" placeholder="Código promocional (ex: 123456)"></p>
-
+            <p><input id="codigo" class="w3-input ip1" type="text" style="" placeholder="Código promocional (ex: 123456)"></p>
+            <div style="margin-bottom:20px;" id="error" class="desaparece form-control-static text-danger bg-danger"> <i class="fa fa-exclamation-triangle"></i> Introduza um código promocional válido (ex: 123456) <br></div><br />
         </div>
 
         <div>
-            <button style="background-color: dodgerblue;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1 b1 ">
+            <button id="validar" style="background-color: dodgerblue;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1 b1 ">
                 Validar
             </button>
 
@@ -311,15 +317,28 @@
     </div>
     <div class="col-lg-6" style="height:100%">
         <img style="padding-top:150px;max-width:100%" src="images/promocao.png">
-
     </div>
 
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="close" type="button" style="position:relative; float: right;" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#3daa36;"> <i class="fa fa-check-circle"></i> Código reivindicado com sucesso!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>      A sua quantidade de bits acaba de ser aumentada.</p>
+                </div>
+            </div>
 
+        </div>
+    </div>
 
+  
     <script type="text/javascript" src="cordova.js"></script>
-
+    <script src="../js/promocao.js"></script>
 
 
 </body>

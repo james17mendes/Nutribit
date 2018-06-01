@@ -408,11 +408,9 @@
 
             $("#myModal3").modal("show");
 
-            window.setTimeout(redirecionar, 3000);
-            function redirecionar() {
-                window.location = "home.html";
-
-            }
+            $("#close").click(function () {
+                window.location = "Feedback.html";
+            });
 
         }
 
@@ -447,7 +445,4 @@
         localStorage.setItem('users', JSON.stringify(users));
 
     });
-
-
-
 });
