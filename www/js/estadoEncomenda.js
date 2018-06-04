@@ -34,6 +34,23 @@
     $("#nome").html("" + currentUser.name);
     $("#bits").html("" + currentUser.bits);
 
+    window.setTimeout(estado1, 3000);
+    function estado1() {
+        $("#pa").addClass("active");
+        window.setTimeout(estado2, 3000);
+        function estado2() {
+            $("#pr").addClass("active");
+            window.setTimeout(estado3, 3000);
+            function estado3() {
+                $("#pe").addClass("active");
+            }
+        }
+    }
+  
+    
+
+   
+
     $("#sair").click(function () {
         console.log("Logout...")
         localStorage.removeItem("currentUser");
