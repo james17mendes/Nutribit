@@ -13,6 +13,7 @@
         this.postaCode = "";
         this.phone = "";
         this.pagamento = "dinheiro";
+        this.orders = new Array;
         console.log("Creating a new person...")
     }
 

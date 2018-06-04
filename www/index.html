@@ -23,7 +23,7 @@
              console.log("Document ready...")
 
              // Construtor de uma pessoa
-             function Person(name, company, email, password, accountType, bits, pagamento) {
+             function Person(name, company, email, password, accountType, bits, pagamento, orders) {
                  this.name = name;
                  this.company = company;
                  this.email = email;
@@ -34,6 +34,7 @@
                  this.postaCode = "";
                  this.phone = "";
                  this.pagamento = pagamento;
+                 this.orders = orders;
                  console.log("Creating a new person...")
              }
 
@@ -51,7 +52,7 @@
              }
 
              // Pessoa teste
-             var p1 = new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789", "cli", 200, "dinheiro");
+             var p1 = new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789", "cli", 200, "dinheiro", new Array);
 
              var users = new Array; // Array para guardar todos os utilizadores
              users.push(p1); // Adicionar um utilizador teste

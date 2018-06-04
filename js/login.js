@@ -2,7 +2,7 @@
 
     console.log("Document ready...")
 
-    function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento) {
+    function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento, orders) {
         this.name = name;
         this.company = company;
         this.email = email;
@@ -13,6 +13,7 @@
         this.postaCode = postaCode;
         this.phone = phone;
         this.pagamento = pagamento;
+        this.orders = orders;
         console.log("Creating a new person...")
     }
 
@@ -60,7 +61,7 @@
             for (var i = 0; i < users.length; i++) {
                 if (email == users[i].email) {
                     console.log("\nEmail encontrado!");
-                    currentUser = new Person(users[i].name, users[i].company, users[i].email, users[i].password, users[i].accountType, users[i].bits, users[i].address, users[i].postaCode, users[i].phone, users[i].pagamento);
+                    currentUser = new Person(users[i].name, users[i].company, users[i].email, users[i].password, users[i].accountType, users[i].bits, users[i].address, users[i].postaCode, users[i].phone, users[i].pagamento, users[i].orders);
                     validUser = true;
                     break;
                 }

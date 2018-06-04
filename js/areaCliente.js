@@ -2,7 +2,7 @@
 
     console.log("Document ready...");
 
-    function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento) {
+    function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento, orders) {
         this.name = name;
         this.company = company;
         this.email = email;
@@ -13,6 +13,7 @@
         this.postaCode = postaCode;
         this.phone = phone;
         this.pagamento = pagamento;
+        this.orders = orders;
         console.log("Creating a new person...")
     }
 

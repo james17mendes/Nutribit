@@ -22,6 +22,13 @@
 
 
     <style>
+        .mostra {
+            display: normal;
+        }
+
+        .esconde {
+            display: none;
+        }
 
         .aparece {
             display: normal;
@@ -241,64 +248,101 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
                         <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
+                            <li id="order1" class="mostra">
                                 <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                    <span class="item-info">
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName1">Não há pedidos</span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice1"></span>
                                         </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider1" class="divider mostra"></li>
+                            <li id="order2" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"> <span id="orderName2"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice2"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider2" class="divider esconde"></li>
+                            <li id="order3" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName3"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice3"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider3" class="divider esconde"></li>
+                            <li id="order4" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName4"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice4"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
+                            <li id="divider4" class="divider esconde"></li>
+                            <li id="order5" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName5"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice5"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider5" class="divider esconde"></li>
+                            <li id="order6" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName6"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice6"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider6" class="divider esconde"></li>
+                            <li id="order7" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName7"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice7"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider7" class="divider esconde"></li>
                         </ul>
                     </li>
                 </ul>
@@ -455,13 +499,13 @@
                         <a id="i4" href="#" class="list-group-item aparece"></a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Vitamina A: <span id="v1"></span></li>
-                        <li>Vitamina B: <span id="v2"></span></li>
-                        <li>Vitamina C: <span id="v3"></span></li>
-                        <li>Fibra: <span id="v4"></span></li>
-                        <li><b>Calorias:</b> <span id="v5"></span> kcal </li>
-                    </ul>
+                    <div class="list-group">
+                        <a class="list-group-item">Vitamina A: <span id="v1"></span></a>
+                        <a class="list-group-item">Vitamina B: <span id="v2"></span></a>
+                        <a class="list-group-item">Vitamina C: <span id="v3"></span></a>
+                        <a class="list-group-item">Fibra: <span id="v4"></span></a>
+                        <a class="list-group-item"><b>Calorias:</b> <span id="v5"></span> kcal </a>
+                    </div>
                     <h6><b>Preço:</b> <span id="preco"></span> €</h6>
                 </div>
                 <div class="modal-footer">
@@ -639,50 +683,60 @@
 
             });
 
+            var currentOrder = JSON.parse(localStorage.getItem('currentOrder'));
+
             $("#e1").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[0]));
+                currentOrder.drink = bebidas[0];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e2").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[1]));
+                currentOrder.drink = bebidas[1];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e3").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[2]));
+                currentOrder.drink = bebidas[2];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e4").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[3]));
+                currentOrder.drink = bebidas[3];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e5").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[4]));
+                currentOrder.drink = bebidas[4];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e6").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[5]));
+                currentOrder.drink = bebidas[5];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e7").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[6]));
+                currentOrder.drink = bebidas[6];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
             $("#e8").click(function () {
-                localStorage.setItem("currentDrink", JSON.stringify(bebidas[7]));
+                currentOrder.drink = bebidas[7];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "Encomenda2.html";
             })
 
         });
 
     </script>
-
+    <script src="../js/shoppingCart.js"></script>
 
 
 </body>

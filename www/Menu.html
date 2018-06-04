@@ -22,6 +22,13 @@
 
 
     <style>
+        .mostra {
+            display: normal;
+        }
+
+        .esconde {
+            display: none;
+        }
         html {
             margin: 0;
             height: 100%;
@@ -232,21 +239,101 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
                         <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
+                            <li id="order1" class="mostra">
                                 <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                    <span class="item-info">
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName1">Não há pedidos</span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice1"></span>
                                         </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
                                     </span>
                                 </span>
                             </li>
-                            <li class="divider"></li>
+                            <li id="divider1" class="divider mostra"></li>
+                            <li id="order2" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"> <span id="orderName2"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice2"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider2" class="divider esconde"></li>
+                            <li id="order3" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName3"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice3"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider3" class="divider esconde"></li>
+                            <li id="order4" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName4"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice4"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider4" class="divider esconde"></li>
+                            <li id="order5" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName5"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice5"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider5" class="divider esconde"></li>
+                            <li id="order6" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName6"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice6"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider6" class="divider esconde"></li>
+                            <li id="order7" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName7"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice7"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider7" class="divider esconde"></li>
                         </ul>
                     </li>
                 </ul>
@@ -378,13 +465,13 @@
                             <a href="#" class="list-group-item">Batata Doce</a>
                         </div> 
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Proteína: 40g</li>
-                        <li>Gordura: 40g</li>
-                        <li>Hidratos de Carbono: 40g</li>
-                        <li>Fibra: 40g</li>
-                        <li><b>Calorias:</b> 500 kcal </li>
-                    </ul>
+                    <div class="list-group">
+                        <a class="list-group-item">Proteína: 40g</a>
+                        <a class="list-group-item">Gordura: 40g</a>
+                        <a class="list-group-item">Hidratos de Carbono: 40g</a>
+                        <a class="list-group-item">Fibra: 40g</a>
+                        <a class="list-group-item"><b>Calorias:</b> 500 kcal </a>
+                    </div>
                     <h6><b>Preço:</b> 6.50 €</h6>
                 </div>
                 <div class="modal-footer">
@@ -417,13 +504,13 @@
                         <a href="#" class="list-group-item">Pêssego</a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Proteína: 60g</li>
-                        <li>Gordura: 70g</li>
-                        <li>Hidratos de Carbono: 80g</li>
-                        <li>Fibra: 100g</li>
-                        <li><b>Calorias:</b> 450 kcal </li>
-                    </ul>
+                    <div class="list-group">
+                        <a class="list-group-item">Proteína: 60g</a>
+                        <a class="list-group-item">Gordura: 70g</a>
+                        <a class="list-group-item">Hidratos de Carbono: 80g</a>
+                        <a class="list-group-item">Fibra: 100g</a>
+                        <a class="list-group-item"><b>Calorias:</b> 450 kcal </a>
+                    </div>
                     <h6><b>Preço:</b> 6.50 €</h6>
                 </div>
                 <div class="modal-footer">
@@ -446,7 +533,7 @@
                 <div class="modal-body">
                     <img style="width:100%" src="images/frango.jpg">
                     <div style="margin-top:20px" id="descrição">
-                        <h8><b>Descrição: </b>Frango saudável com camarão</h8>
+                        <h8><b>Descrição: </b>Atum saudável com camarão</h8>
                     </div>
                     <h6>Ingredientes</h6>
                     <div class="list-group">
@@ -457,13 +544,13 @@
                         <a href="#" class="list-group-item">Abacaxi</a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Proteína: 40g</li>
-                        <li>Gordura: 20g</li>
-                        <li>Hidratos de Carbono: 50g</li>
-                        <li>Fibra: 60g</li>
-                        <li><b>Calorias:</b> 400 kcal </li>
-                    </ul>
+                    <div class="list-group">
+                        <a class="list-group-item">Proteína: 40g</a>
+                        <a class="list-group-item">Gordura: 20g</a>
+                        <a class="list-group-item">Hidratos de Carbono: 50g</a>
+                        <a class="list-group-item">Fibra: 60g</a>
+                        <a class="list-group-item"><b>Calorias:</b> 400 kcal </a>
+                    </div>
                     <h6><b>Preço:</b> 7.00 €</h6>
                 </div>
                 <div class="modal-footer">
@@ -497,13 +584,13 @@
                         <a href="#" class="list-group-item">Laranja</a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Proteína: 40g</li>
-                        <li>Gordura: 30g</li>
-                        <li>Hidratos de Carbono: 60g</li>
-                        <li>Fibra: 70g</li>
-                        <li><b>Calorias:</b> 600 kcal </li>
-                    </ul>
+                    <div class="list-group">
+                        <a class="list-group-item">Proteína: 40g</a>
+                        <a class="list-group-item">Gordura: 30g</a>
+                        <a class="list-group-item">Hidratos de Carbono: 60g</a>
+                        <a class="list-group-item">Fibra: 70g</a>
+                        <a class="list-group-item"><b>Calorias:</b> 600 kcal </a>
+                    </div>
                     <h6><b>Preço:</b> 7.00 €</h6>
                 </div>
                 <div class="modal-footer">
@@ -534,35 +621,41 @@
 
             var menus = new Array;
 
-            menus.push(new Menu("Frango Gain", ["Frango", "Ananás", "Queijo", "Batata Doce"], 6.50));
-            menus.push(new Menu("Tropical", ["Frango", "Ananás", "Queijo", "Pêssego"], 6.50));
-            menus.push(new Menu("Havaiana", ["Atum", "Camarão", "Cenoura", "Tomate", "Abacaxi"], 6.50));
-            menus.push(new Menu("Frutas", ["Frango", "Kiwi", "Queijo", "Abacaxi", "Laranja"], 6.50));
+            menus.push(new Menu("Menu Frango Gain", ["Frango", "Ananás", "Queijo", "Batata Doce"], 6.50));
+            menus.push(new Menu("Menu Tropical", ["Frango", "Ananás", "Queijo", "Pêssego"], 6.50));
+            menus.push(new Menu("Menu Havaiana", ["Atum", "Camarão", "Cenoura", "Tomate", "Abacaxi"], 6.50));
+            menus.push(new Menu("Menu Frutas", ["Frango", "Kiwi", "Queijo", "Abacaxi", "Laranja"], 6.50));
+
+            var currentOrder = JSON.parse(localStorage.getItem('currentOrder'));
 
            
             $("#menu1").click(function () {
-                localStorage.setItem('currentMeal', JSON.stringify(menus[0]));
+                currentOrder.meal = menus[0];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "bebidas.html";
             });
 
             $("#menu2").click(function () {
-                localStorage.setItem('currentMeal', JSON.stringify(menus[1]));
+                currentOrder.meal = menus[1];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "bebidas.html";
             });
 
             $("#menu3").click(function () {
-                localStorage.setItem('currentMeal', JSON.stringify(menus[2]));
+                currentOrder.meal = menus[2];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "bebidas.html";
             });
 
             $("#menu4").click(function () {
-                localStorage.setItem('currentMeal', JSON.stringify(menus[3]));
+                currentOrder.meal = menus[3];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
                 window.location = "bebidas.html";
             });
 
         });
     </script>
-
+    <script src="../js/shoppingCart.js"></script>
 
 </body>
 </html>
