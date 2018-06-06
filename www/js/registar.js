@@ -16,6 +16,7 @@
         this.orders = new Array;
         console.log("Creating a new person...")
     }
+    
 
     var users = new Array; // Array para guardar todos os utilizadores
     var localData;

@@ -53,9 +53,15 @@
 
              // Pessoa teste
              var p1 = new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789", "cli", 200, "dinheiro", new Array);
+             var p2 = new Person("Cristiano Ronaldo", "Real Madrid", "cr7@halamadrid.es", "123456789", "cli", 100, "paypal", new Array);
+             var p3 = new Person("Joaquim Barreiros", "Nutribit", "joaquim@hotmail.com", "123456789", "rest", 0, "dinheiro", new Array);
+             var p4 = new Person("Administrador", "Nutribit", "admin@nutribit.com", "pwdeadmin123", "admin", 0, "dinheiro", new Array);
 
              var users = new Array; // Array para guardar todos os utilizadores
              users.push(p1); // Adicionar um utilizador teste
+             users.push(p2); // Adicionar um utilizador teste
+             users.push(p3); // Adicionar um utilizador teste
+             users.push(p4); // Adicionar um utilizador teste
              localStorage.setItem('users', JSON.stringify(users)); // Guardar o array no localStorage
              console.log("User test added to localStorage");
 

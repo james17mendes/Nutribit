@@ -243,7 +243,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -258,26 +258,14 @@
 
 
 
-                        <a style="color:white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
                         <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-                            <li>
-                                <a style="color:white;float:right" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a style="color:white;float:right" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
-                            </li>
-                            <li>
-                                <a style="color:white;float:right" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-                            </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -286,80 +274,8 @@
 
 
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
-                        <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
-                    </li>
 
 
-                </ul>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -367,7 +283,21 @@
 
     <div class="container col-lg-12" style="background-color:forestgreen;float:left;color:white;position:relative;width:100%">
         <h2 class="col-lg-10"><i class="fa fa-commenting " aria-hidden="true"></i> Feedback</h2>
-        <span class="col-lg-2" style="font-size:40px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="AreaCliente.html" style="color:white">Voltar</a></span>
+        <span class="col-lg-2" style="font-size:40px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="AreaAdministrador.html" style="color:white">Voltar</a></span>
+    </div>
+
+    <div class="container col-lg-12">
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sugestao</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
 
    
@@ -377,7 +307,22 @@
 
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        $(document).ready(function () {
 
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            $("#nome").html("" + currentUser.name);
+
+            var sugestions = JSON.parse(localStorage.getItem('sugestions'));
+
+            for (var i = 0; i < sugestions.length; i++) {
+                $('#myTable').append('<tr><th scope="row">' + (i + 1) + '</th><td>' + sugestions[i].person.name + '</td><td>' + sugestions[i].sugestao + '</td></tr>');
+            }
+
+            
+
+        });
+    </script>
 
 
 </body>

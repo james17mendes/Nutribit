@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-    console.log("Document ready...")
+    console.log("Document ready...");
 
     function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento, orders) {
         this.name = name;
@@ -16,6 +16,7 @@
         this.orders = orders;
         console.log("Creating a new person...")
     }
+    
 
     var user = new Array;
 
@@ -61,7 +62,7 @@
             for (var i = 0; i < users.length; i++) {
                 if (email == users[i].email) {
                     console.log("\nEmail encontrado!");
-                    currentUser = new Person(users[i].name, users[i].company, users[i].email, users[i].password, users[i].accountType, users[i].bits, users[i].address, users[i].postaCode, users[i].phone, users[i].pagamento, users[i].orders);
+                    currentUser = new Person(users[i].name, users[i].company, users[i].email, users[i].password, users[i].accountType, users[i].bits, users[i].address, users[i].postaCode, users[i].phone, users[i].pagamento, users[i].orders, users[i].weekMeals);
                     validUser = true;
                     break;
                 }
@@ -85,7 +86,20 @@
                     console.log("Palavra-passe: " + currentUser.password);
                     console.log("Account type: " + currentUser.accountType);
                     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-                    window.location = "AreaCliente.html";
+                    if (currentUser.accountType == "cli") {
+                        window.location = "AreaCliente.html";
+                    }
+                    if (currentUser.accountType == "admin" && currentUser.password == "pwdeadmin123") {
+                        window.location = "AreaAdministrador.html";
+                    } else {
+                        currentUser.accountType == "cli";
+                        window.location = "AreaCliente.html";
+                    }
+
+                    if (currentUser.accountType == "rest") {
+                        window.location = "Refeicoes_restaurante.html";
+                    }
+                    
                 } else {
                     console.log("\nPalavra-passe incorreta!")
                     if ($('#pw_Error2').hasClass("no_error"))

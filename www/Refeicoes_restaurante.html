@@ -194,7 +194,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -209,26 +209,14 @@
 
 
 
-                        <a style="color:white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
                         <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-                            <li>
-                                <a style="color:white;float:right" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a style="color:white;float:right" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
-                            </li>
-                            <li>
-                                <a style="color:white;float:right" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-                            </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -237,80 +225,8 @@
 
 
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
-                        <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
-                                        <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
-                                        </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                                    </span>
-                                </span>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
-                    </li>
 
 
-                </ul>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -326,85 +242,48 @@
         <h2 class="col-lg-10 ch1"><i style="font-size:50px;" class="material-icons">restaurant_menu</i> Refeições para confecionar:</h2>
 
     </div>
-
-    <div class=" fade col-lg-2  div1" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Menu 1 </h4>
-        
-        <ul>
-            <li><b>>Composto por:</b></li>
-            <li>Frango Gainz</li>
-            <li>Sumo multivitaminas</li>
-            
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
-        <div class="col-lg-12">
-            <button data-toggle="modal" data-target="#modal1" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-                Info
-            </button>
-
-        </div>
-
+    <div class="container col-lg-12">
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Refeição</th>
+                    <th scope="col">Ingredientes</th>
+                    <th scope="col">Bebida</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Morada</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
-    <div class=" fade col-lg-2  div1" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Menu 1 </h4>
 
-        <ul>
-            <li><b>>Composto por:</b></li>
-            <li>Frango Gainz</li>
-            <li>Sumo multivitaminas</li>
-
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
-        <div class="col-lg-12">
-            <button data-toggle="modal" data-target="#modal1" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-                Info
-            </button>
-
-        </div>
-
-    </div>
-   
-
-    <!-- Modal 1 meal-->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Menu 1</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img style="width:100%" src="images/frango.jpg">
-                    
-                    <h6>Composto por:</h6>
-                    <ul>
-                        <li>Frango gainz</li>
-                        <li>Sumo de multivitaminas</li>
-                        
-                    </ul>
-                    <h6>Estado da encomenda:</h6>
-                    <div class="form-check  col-lg-12 ">
-                        <input checked="checked"  class="form-check-input col-lg-12 " type="checkbox" id="inlineCheckbox1" value="option1">Pedido submetido<br>
-                        <input  checked="checked" class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Pedido aceite<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Preparação<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Pronto para entrega<br>
-                    </div>
-                   
-                   
-                    <h6><b>Modo de pagamento:</b> Em dinheiro</h6>
-                    <h6><b>Preço:</b> 6.50</h6>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            $("#nome").html("" + currentUser.name);
+
+            var users = JSON.parse(localStorage.getItem('users'));
+            var counter = 1;
+
+            for (var i = 0; i < users.length; i++) {
+                var user = users[i];
+                if (user.orders != null) {
+                    for (var j = 0; j < user.orders.length; j++) {
+                        $('#myTable').append('<tr><th scope="row">' + counter + '</th><td>' + user.orders[j].meal.nome + '</td><td>' + user.orders[j].meal.ingredientes + '</td><td>' + user.orders[j].drink.nome + '</td><td>' + user.name + '</td><td>' + user.address + '</tr>');
+                        counter++;
+                    }
+                }
+                
+                
+            }
+
+        });
+    </script>
 
 
 

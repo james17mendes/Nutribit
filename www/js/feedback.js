@@ -1,6 +1,6 @@
 ﻿﻿$(document).ready(function () {
 
-    console.log("Document ready...");
+     console.log("Document ready...");
 
     function Person(name, company, email, password, accountType, bits, address, postaCode, phone, pagamento) {
         this.name = name;

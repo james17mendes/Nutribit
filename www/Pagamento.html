@@ -372,6 +372,7 @@
         $(document).ready(function () {
 
             var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            localStorage.setItem('alterar', 'false');
 
             $("#nome").html("" + currentUser.name);
             $("#bits").html("" + currentUser.bits);
