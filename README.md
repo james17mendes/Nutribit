@@ -35,7 +35,7 @@ Pode ainda criar outras contas do tipo 'administrador', desde que a palavra-pass
 #### Código: 847392 Bits: 100
 #### Código: 104957 Bits: 400
 #### Código: 184739 Bits: 100
-####Código: 182874 Bits: 50)
+#### Código: 182874 Bits: 50)
 
 
 ## Projeto de Código
