@@ -16,8 +16,8 @@ No browser, abrir o ficheiro:
 ## Contas pré-definidas
 
 ### Contas de clientes
-Login: tiagocmendes@ua.pt Password: 123456789
-Login: cr7@halamadrid.es  Password: 987654321
+Login: tiagocmendes@ua.pt Password: 1234567891\n
+Login: cr7@halamadrid.es  Password: 987654321\n
 Pode ainda criar outras contas do tipo 'cliente'.
 
 ### Conta de restaurante
