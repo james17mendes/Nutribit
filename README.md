@@ -38,7 +38,7 @@ Pode ainda criar outras contas do tipo 'administrador', desde que a palavra-pass
 #### Código: 182874 Bits: 50)
 
 
-## Projeto de Código
+## Código do projeto
 
 ## GitHub
 https://github.com/tiagocmendes/Nutribit
