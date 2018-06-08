@@ -5,7 +5,7 @@
 
 ### Online
 
-http://nutribit.bitballoon.com/home.html
+http://nutribit.bitballoon.com/
 
 ### Desktop
 
