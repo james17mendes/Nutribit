@@ -22,6 +22,31 @@
 
 
 	<style>
+        .mostra {
+            display: normal;
+        }
+
+        .esconde {
+            display: none;
+        }
+
+        .aparece {
+            display: inline-block;
+        }
+
+        .desaparece {
+            display: none;
+        }
+
+        .profilePic {
+            height: 150px;
+            margin-left:70px;
+        }
+        .label1 {
+            color: #3daa36;
+        }
+        h3 { color: #3daa36; }
+        
 
 				html {
 					margin: 0;
@@ -112,6 +137,11 @@
 
 				}
 
+        .b1 {
+            margin-top: 25px;
+            margin-left:40%;
+        }
+
 			.custom-toggler .navbar-toggler-icon {
 		  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 		}
@@ -133,140 +163,179 @@
 		}
 
 
+        @media screen and (max-width: 600px) {
+            .b1 {
+           
+                margin-top: 50px;
+                margin-bottom:50px;
+            }
+        }
+
 	</style>
 
 
-	<nav class="navbar  navbar-fixed-top" style="background-color:forestgreen;position:relative;margin-bottom:0px">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button  style="border-color:blue" type="button" class="navbar-toggle  navbar-dark collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only ">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				
-
-				
-
-
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-
-
-
-
-							<a style="color:white" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
-
-
-
-							<ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
-								<li>
-									<a style="color:white;float:right" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a style="color:white;float:right" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a style="color:white;float:right" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
-								</li>
-								<li>
-									<a style="color:white;float:right" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
-								</li>
-
-								
-								
-							</ul>
-						</li>
-					</ul>
+    <nav class="navbar  navbar-fixed-top" style="background-color:forestgreen;position:relative;margin-bottom:0px">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button style="" type="button" class="navbar-right navbar-toggle  navbar-toggler ml-auto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class=" my-toggler"><i class="fa fa-bars"></i></span>
+                </button>
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
 
 
 
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
-							<ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-								<li>
-									<span class="item">
-										<span class="item-left">
-											<img src="http://lorempixel.com/50/50/" alt="" />
-											<span class="item-info">
-												<span>Item name</span>
-												<span>23$</span>
-											</span>
-										</span>
-										<span class="item-right">
-											<button class="btn btn-xs btn-danger pull-right">x</button>
-										</span>
-									</span>
-								</li>
-								<li>
-									<span class="item">
-										<span class="item-left">
-											<img src="http://lorempixel.com/50/50/" alt="" />
-											<span class="item-info">
-												<span>Item name</span>
-												<span>23$</span>
-											</span>
-										</span>
-										<span class="item-right">
-											<button class="btn btn-xs btn-danger pull-right">x</button>
-										</span>
-									</span>
-								</li>
-								<li>
-									<span class="item">
-										<span class="item-left">
-											<img src="http://lorempixel.com/50/50/" alt="" />
-											<span class="item-info">
-												<span>Item name</span>
-												<span>23$</span>
-											</span>
-										</span>
-										<span class="item-right">
-											<button class="btn btn-xs btn-danger pull-right">x</button>
-										</span>
-									</span>
-								</li>
-								<li>
-									<span class="item">
-										<span class="item-left">
-											<img src="http://lorempixel.com/50/50/" alt="" />
-											<span class="item-info">
-												<span>Item name</span>
-												<span>23$</span>
-											</span>
-										</span>
-										<span class="item-right">
-											<button class="btn btn-xs btn-danger pull-right">x</button>
-										</span>
-									</span>
-								</li>
-								<li class="divider"></li>
-								<li><a class="text-center" href="">View Cart</a></li>
-							</ul>
-						</li>
-					</ul>
-				<ul class="nav navbar-nav navbar-right">
-
-					<li style="margin-top:15px">
-						<span style="color:white;font-size:20px">100 bits</span>
-						<img  style="width:50px"  src="images/logo3.png">
-					</li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
 
 
-				</ul>
 
-		</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
+
+
+
+                        <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                            </li>
+                            <li>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
+                        <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
+                            <li id="order1" class="mostra">
+                                <span class="item">
+                                    <span class="item-info">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName1">Não há pedidos</span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice1"></span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider1" class="divider mostra"></li>
+                            <li id="order2" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"> <span id="orderName2"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice2"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider2" class="divider esconde"></li>
+                            <li id="order3" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName3"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice3"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider3" class="divider esconde"></li>
+                            <li id="order4" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName4"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice4"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider4" class="divider esconde"></li>
+                            <li id="order5" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName5"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice5"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider5" class="divider esconde"></li>
+                            <li id="order6" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName6"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice6"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider6" class="divider esconde"></li>
+                            <li id="order7" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName7"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice7"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider7" class="divider esconde"></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li style="margin-top:15px">
+                        <span id="bits" style="color:white;font-size:20px"></span><span style="color:white;font-size:20px"> bits</span>
+                        <img style="width:40px" src="images/logo3.png">
+                    </li>
+
+
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 
 
 	<div class="container col-lg-12" style="background-color:forestgreen;float:left;color:white;position:relative;width:100%">
@@ -274,106 +343,217 @@
 		<span class="col-lg-2" style="font-size:40px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="AreaCliente.html" style="color:white">Voltar</a></span>
 	</div>
 
-	<div class="col-lg-6">
-		<h3 style="color:forestgreen" class="col-lg-11 col-lg-offset-1"><u>Informações Básicas</u></h3>
-		<img src="images/sad.png"  style="width:200px;border:3px solid forestgreen;padding:0;margin-left:85px"  alt="Avatar" class="col-lg-4 col-lg-offset-1">
+    <div class="container" style="min-height:700px;">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="container">
+                    <div class="row">
+                        <h3>Informações básicas</h3>
+                    </div>
+                    <div class="row">
+                        <img class="profilePic" src="images/profile.png" alt="Profile Picture">
+                    </div>
+                    <div class="row">
+                        <table>
+                            <tr>
+                                <td><h6 class="label1">Nome:</h6></td>
+                                <td><h6 id="l1" style="color:gray;" class="aparece"></h6></td>
+                                <td><input id="i1" class="desaparece form-control"><i id="e1" class="fa fa-exclamation-triangle desaparece" style="margin-left:10px;"></i></td>
 
-		<div class="col-lg-6 col-lg-offset-1">
-			<table class="table borderless">
-				
-				<tbody style="font-size:20px">
-					<tr>
-						<th scope="row" style="border:none" class="title">Nome:</th>
-						<td style="border:none">Tiago Mendes</td>
-						
-					</tr>
-					<tr>
-						<th scope="row" class="title" style="border:none">Email:</th>
-						<td style="border:none">mendes@ua.pt</td>
-					</tr>
-					<tr>
-						<th scope="row" class="title" style="border:none">Empresa:</th>
-						<td style="border:none"></td>
-						
-					</tr>
-					<tr>
-						<th scope="row" class="title" style="border:none">Morada</th>
-						<td style="border:none">Aveiro</td>
+                            </tr>
+                            <tr>
+                                <td><h6 class="label1">Empresa:</h6></td>
+                                <td><h6 id="l2" style="color:gray;" class="aparece"></h6></td>
+                                <td><input id="i2" class="desaparece form-control"><i id="e2" class="fa fa-exclamation-triangle desaparece" style="margin-left:10px;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><h6 class="label1">Morada:</h6></td>
+                                <td><h6 id="l3" style="color:gray;" class="aparece"></h6></td>
+                                <td><input id="i3" class="desaparece form-control"><i id="e3" class="fa fa-exclamation-triangle desaparece" style="margin-left:10px;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><h6 class="label1">Código Postal:</h6></td>
+                                <td><h6 id="l4" style="color:gray;" class="aparece"></h6></td>
+                                <td><input id="i4" class="desaparece form-control" placeholder="Ex: 1000-000"><i id="e4" class="fa fa-exclamation-triangle desaparece" style="margin-left:10px;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><h6 class="label1">Telemóvel:</h6></td>
+                                <td><h6 id="l5" style="color:gray;" class="aparece"></h6></td>
+                                <td><input id="i5" class="desaparece form-control"><i id="e5" class="fa fa-exclamation-triangle desaparece" style="margin-left:10px;"></i></td>
 
-					</tr>
-					<tr>
-						<th scope="row" class="title" style="border:none">Código postal:</th>
-						<td style="border:none">3800-000</td>
+                            </tr>
+                            <tr>
+                                <td><button id="editarP" class="btn btn-primary">Editar Perfil</button></td>
+                                <td><button id="cancelar1" class="btn btn-danger desaparece">Cancelar</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <h3>Definições avançadas</h3>
+                </div>
+                <div style="min-height:250px;">
+                    <div class="row">
+                        <div class="col-lg-5"><button id="btn-pw" class="btn btn-primary aparece">Alterar palavra-passe</button></div>
+                        <div class="col-lg-4"><button id="btn-email" class="btn btn-success aparece">Alterar email</button></div>
+                        <div class="col-lg-3"><button id="btn-conta" class="btn btn-danger aparece">Eliminar conta</button></div>
+                    </div>
+                    <div id="pw" class="desaparece">
+                        <div class="row">
+                            <div class="col-xs-6"><h6 class="label1"><i class="fa fa-unlock-alt"></i> Palavra-passe atual</h6></div>
+                            <div class="col-xs-5" style="margin-top:20px;"><input id="pw1" type="password" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e6" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6"><h6 class="label1"><i class="fa fa-key"></i> Nova palavra-passe</h6></div>
+                            <div class="col-xs-5" style="margin-top:20px;"><input id="pw2" type="password" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e7" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6"><h6 class="label1"><i class="fa fa-check"></i> Confirmação</h6></div>
+                            <div class="col-xs-5" style="margin-top:20px;"><input id="pw3" type="password" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e8" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-6"><button id="btn-pw2" class="btn btn-primary">Alterar palavra-passe</button></div>
+                            <div class="col-xs-3"><button id="cancelar2" class="btn btn-danger">Cancelar</button></div>
+                        </div>
+                    </div>
+                    <div id="email" class="desaparece">
+                        <div class="row">
+                            <div class="col-xs-5"><h6 class="label1"><i class="fa fa-envelope"></i> Email</h6></div>
+                            <div class="col-xs-6" style="margin-top:20px;"><input id="email1" type="email" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e9" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5"><h6 class="label1"><i class="fa fa-at"></i> Novo email</h6></div>
+                            <div class="col-xs-6" style="margin-top:20px;"><input id="email2" type="email" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e10" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5"><h6 class="label1"><i class="fa fa-unlock-alt"></i> Password</h6></div>
+                            <div class="col-xs-6" style="margin-top:20px;"><input id="email3" type="password" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e11" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-5"></div>
+                            <div class="col-xs-4"><button id="btn-email2" class="btn btn-primary">Alterar email</button></div>
+                            <div class="col-xs-3"><button id="cancelar3" class="btn btn-danger">Cancelar</button></div>
+                        </div>
+                    </div>
+                    <div id="eConta" class="desaparece">
+                        <div class="row">
+                            <div class="col-xs-6"><h6 class="label1"><i class="fa fa-envelope"></i> Email</h6></div>
+                            <div class="col-xs-5" style="margin-top:20px;"><input id="conta1" type="email" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e12" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6"><h6 class="label1"><i class="fa fa-unlock-alt"></i> Palavra-passe</h6></div>
+                            <div class="col-xs-5" style="margin-top:20px;"><input id="conta2" type="password" class="form-control"></div>
+                            <div class="col-xs-1"><i id="e13" class="fa fa-exclamation-triangle desaparece" style="margin-top:30px;"></i></div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-5"></div>
+                            <div class="col-xs-4"><button id="btn-conta2" class="btn btn-primary">Eliminar conta</button></div>
+                            <div class="col-xs-3"><button id="cancelar6" class="btn btn-danger">Cancelar</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>Meio de pagamento predefinido</h3>
+                </div>
+                <div class="row">
 
-					</tr>
-					<tr>
-						<th scope="row" class="title" style="border:none">Telemóvel:</th>
-						<td style="border:none">931654789</td>
+                    <div class="form-inline">
+                        <div class="col-xs-8 col-xs-offset-4">
+                            <span style="font-size:80px;"><i class="fa fa-money"></i></span><br />
+                            <label class="radio-inline">
+                                <input id="dinheiro" type="radio" name="optradio">Dinheiro
+                            </label>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-4">
+                            <span style="font-size:80px;"><i class="fa fa-paypal"></i></span><br />
+                            <label class="radio-inline">
+                                <input id="paypal" type="radio" name="optradio">Paypal
+                            </label>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-4">
+                            <span style="font-size:80px;"><i class="fa fa-cc-visa"></i></span><br />
+                            <label class="radio-inline">
+                                <input id="multibanco" type="radio" name="optradio">Multibanco
+                            </label>
+                            
+                        </div>
+                        <button style=" " id="pagamento" class="btn btn-success b1">Escolher</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
 
-					</tr>
-				</tbody>
-			</table>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="cancelar4" style="position:relative; float: right;" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#3daa36;"> <i class="fa fa-check-circle"></i> Palavra-passe alterada com sucesso!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>      Guarde a sua palavra-passe num sítio seguro.</p>
+                </div>
+            </div>
 
+        </div>
+    </div>
 
+    <!-- Modal -->
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-		</div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="cancelar5" style="position:relative; float: right;" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:#3daa36;"> <i class="fa fa-check-circle"></i> Email alterado com sucesso!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>      Guarde o seu email num sítio seguro.</p>
+                </div>
+            </div>
 
-		<div class="col-lg-6">
-			<button style="background-color:dodgerblue;color:white;margin-left:110px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Alterar foto
-			</button>
+        </div>
+    </div>
 
-		</div >
-		<div class="col-lg-6">
-			<button style="background-color:dodgerblue;color:white;margin-left:50px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Editar perfil
-			</button>
+    <!-- Modal -->
+    <div id="myModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-		</div>
-	</div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color:#3daa36;"> <i class="fa fa-check-circle"></i> Conta apagada com sucesso!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>      Irá ser redirecionado para a página inicial.</p>
+                </div>
+            </div>
 
-
-	<div class="col-lg-6">
-		<h3 style="color:forestgreen;text-align:end" class="col-lg-11 "><u>Definições avançadas</u></h3>
-		<div class="col-lg-7 col-lg-offset-5">
-			<button style="background-color:dodgerblue;color:white;margin-left:90px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Alterar palavra-passe
-			</button>
-
-		</div>
-		<div class="col-lg-7 col-lg-offset-5">
-			<button style="background-color:red;color:white;margin-left:150px;margin-top:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-				Eliminar conta
-			</button>
-
-		</div>
-
-		<h3 style="color:forestgreen;text-align:end;margin-top:200px" class="col-lg-11 "><u>Método de pagamento predefinido</u></h3>
-		<div class="col-lg-12">
-			<div class="form-check form-check-inline col-lg-2 col-lg-offset-2" >
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:50px" for="inlineCheckbox1"><i  class="fa fa-paypal"></i></label>
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:15px" for="inlineCheckbox1">PayPal</label>
-				<input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">
-				
-			</div>
-			<div class="form-check form-check-inline col-lg-2 col-lg-offset-1">
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:50px" for="inlineCheckbox1"><i class="fa fa-credit-card"></i></label>
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:15px" for="inlineCheckbox1">Multibanco</label>
-				<input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">
-			</div>
-			<div class="form-check form-check-inline col-lg-2 col-lg-offset-1">
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:50px" for="inlineCheckbox1"><i class="fa fa-money"></i></label>
-				<label class="form-check-label col-lg-12" style="text-align:center;font-size:15px" for="inlineCheckbox1">Dinheiro</label>
-				<input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">
-			</div>
-		</div>
-	</div>
+        </div>
+    </div>
 
 
 	<script type="text/javascript" src="cordova.js"></script>
-
-
+    <script src="js/perfil.js"></script>
+    <script src="js/shoppingCart.js"></script>
 
 </body>
 </html>

@@ -22,6 +22,10 @@
 
 
     <style>
+        a {
+            text-decoration: none !important;
+        }
+
         .mostra {
             display: normal;
         }
@@ -146,6 +150,102 @@
             .fade:hover {
                 opacity: 1;
             }
+
+
+        .div1 {
+            background-color: forestgreen;
+            color: white;
+            margin-left: 150px;
+            width: 80%;
+            margin-top: 40px;
+            border-radius: 10px
+        }
+
+        .ch1 {
+            margin-left: 150px
+        }
+
+        .ch2 {
+            margin-left: 200px;
+            margin-bottom: 10px;
+        }
+
+        .ch3 {
+            margin-left: 230px;
+            margin-bottom: 20px;
+            margin-top: 10px
+        }
+
+        .ch4 {
+            font-size: 190px;
+            margin-left: 130px;
+            margin-bottom: 10px
+        }
+
+        .ch5 {
+            margin-left: 190px;
+            margin-bottom: 20px
+        }
+
+        .ch6 {
+            margin-left: 110px
+        }
+
+        .ch7 {
+            margin-left: 170px;
+            margin-bottom: 20px
+        }
+
+        @media screen and (max-width: 600px) {
+            .div1 {
+                margin-right: 10%;
+                margin-left: 10%;
+                margin-top: 70%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch1 {
+                margin-left: 0%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch2 {
+                margin-left: 20%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch3 {
+                margin-left: 35%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch4 {
+                margin-left: 5%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch5 {
+                margin-left: 27%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch6 {
+                margin-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch7 {
+                margin-left: 34%;
+            }
+        }
     </style>
 
 
@@ -153,11 +253,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button style="border-color:blue" type="button" class="navbar-toggle  navbar-dark collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only ">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button style="" type="button" class="navbar-right navbar-toggle  navbar-toggler ml-auto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class=" my-toggler"><i class="fa fa-bars"></i></span>
                 </button>
                 <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
@@ -321,17 +418,17 @@
         <span class="col-lg-2" style="font-size:40px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="Encomenda2.html" style="color:white">Voltar</a></span>
     </div>
 
-    <div class="container col-lg-12" style="background-color:forestgreen;color:white;margin-left:150px;width:80%;margin-top:40px;border-radius:10px">
-        <h2 class="col-lg-10"><i style="font-size:50px;" class="fa fa-credit-card-alt"></i> Modo de pagamento</h2>
+    <div class="container col-lg-12 div1" style="">
+        <h3 class="col-lg-10"><i style="font-size:50px;" class="fa fa-credit-card-alt"></i> Modo de pagamento</h3>
 
     </div>
 
-    <h3 class="col-lg-8" style="color:forestgreen;margin-left:150px">Pretende efetuar o pagamento por:</h3>
+    <h3 class="col-lg-8 ch1" style="color:forestgreen;">Pretende efetuar o pagamento por:</h3>
 
     <div class="col-lg-4">
-        <span class="col-lg-12" style="font-size:180px;margin-left:200px;margin-bottom:10px"><i class="fa fa-paypal"></i></span>
+        <span class="col-lg-12 ch2" style="font-size:180px;"><i class="fa fa-paypal"></i></span>
         <div class="col-lg-12">
-            <button id="paypal" style="background-color:dodgerblue;color:white;margin-left:230px;margin-bottom:20px;margin-top:10px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="paypal" style="background-color:dodgerblue;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1 ch3 ">
                 PayPal
             </button>
 
@@ -340,9 +437,9 @@
     </div>
 
     <div class="col-lg-4">
-        <span class="col-lg-5" style="font-size:190px;margin-left:130px;margin-bottom:10px"><i class="fa fa-credit-card-alt"></i></span>
+        <span class="col-lg-5" style="font-size:190px;"><i class="fa fa-credit-card-alt ch4"></i></span>
         <div class="col-lg-12">
-            <button id="multibanco" style="background-color:dodgerblue;color:white;margin-left:190px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="multibanco" style="background-color:dodgerblue;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1 ch5  ">
                 Multibanco
             </button>
 
@@ -352,9 +449,9 @@
     </div>
 
     <div class="col-lg-4">
-        <span class="col-lg-5" style="font-size:200px;margin-left:110px"><i class="fa fa-money"></i></span>
+        <span class="col-lg-5 ch6" style="font-size:200px;"><i class="fa fa-money"></i></span>
         <div class="col-lg-12">
-            <button id="dinheiro" style="background-color:dodgerblue;color:white;margin-left:170px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="dinheiro" style="background-color:dodgerblue;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1 ch7 ">
                 Dinheiro
             </button>
 

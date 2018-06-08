@@ -22,6 +22,22 @@
 
 
     <style>
+        .mostra {
+            display: normal;
+        }
+
+        .esconde {
+            display: none;
+        }
+
+        .aparece {
+            display: normal;
+        }
+
+        .desaparece {
+            display: none;
+        }
+
         html {
             margin: 0;
             height: 100%;
@@ -182,11 +198,10 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
                 <button style="" type="button" class="navbar-right navbar-toggle  navbar-toggler ml-auto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class=" my-toggler"><i class="fa fa-bars"></i></span>
                 </button>
-
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -201,26 +216,23 @@
 
 
 
-                        <a style="color:white;transition:0.5s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
-                        <ul style="background-color:black" class="d1 dropdown-menu dropdown-cart " role="menu">
+                        <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -231,74 +243,111 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px;transition:0.5s"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
                         <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
+                            <li id="order1" class="mostra">
                                 <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                    <span class="item-info">
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName1">Não há pedidos</span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice1"></span>
                                         </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider1" class="divider mostra"></li>
+                            <li id="order2" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"> <span id="orderName2"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice2"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider2" class="divider esconde"></li>
+                            <li id="order3" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName3"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice3"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider3" class="divider esconde"></li>
+                            <li id="order4" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName4"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice4"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
+                            <li id="divider4" class="divider esconde"></li>
+                            <li id="order5" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName5"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice5"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider5" class="divider esconde"></li>
+                            <li id="order6" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName6"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice6"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider6" class="divider esconde"></li>
+                            <li id="order7" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName7"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice7"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider7" class="divider esconde"></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
+                        <span id="bits" style="color:white;font-size:20px"></span><span style="color:white;font-size:20px"> bits</span>
+                        <img style="width:40px" src="images/logo3.png">
                     </li>
 
 
@@ -321,11 +370,11 @@
 
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
         <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <a id="b1" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
         
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 3.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e1" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -333,12 +382,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Abacaxi</h4>
+        <a id="b2" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 1.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e2" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -346,12 +395,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Laranja</h4>
+        <a id="b3" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 1.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e3" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -359,12 +408,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Maçã e Morango</h4>
+        <a id="b4" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 2.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e4" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -372,12 +421,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Abacaxi e Maçã</h4>
+        <a id="b5" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 2.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e5" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -385,12 +434,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Abacaxi e Laranja</h4>
+        <a id="b6" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 2.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e6" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -398,12 +447,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Banana e Morango</h4>
+        <a id="b7" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 2.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e7" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -411,12 +460,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Multivitaminas</h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+        <h4 class="col-lg-10" style="padding-right:0px">Manga e Laranja</h4>
+        <a id="b8" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        <h5 style="margin-left:20px">Preço: 2.00</h5>
+        <h5 style="margin-left:20px">Preço: 2.00 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"  onclick="location.href='Encomenda2.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e8" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px"   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -429,36 +478,35 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Multivitaminas</h5>
+                    <h5 class="modal-title" id="titulo"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img style="width:100%" src="images/vitaminas.jpg">
+                    <img style="width:100%" src="images/Capa.png">
                     <div style="margin-top:20px" id="descrição">
-                        <h8>Sumo cheio de vitaminas</h8>
+                        <h8><b>Descrição: </b> <span id="descricao1"></span></h8>
                     </div>
                     <h6>Ingredientes</h6>
-                    <div class="form-check  col-lg-12 ">
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Melão<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Anánas<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Laranja<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Cenoura<br>
+                    <div class="list-group">
+                        <a id="i1" href="#" class="list-group-item aparece"></a>
+                        <a id="i2" href="#" class="list-group-item aparece"></a>
+                        <a id="i3" href="#" class="list-group-item aparece"></a>
+                        <a id="i4" href="#" class="list-group-item aparece"></a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Vitamina c: 40g</li>
-                        <li>Vitamina B: 40g</li>
-                        <li>Vitamina A: 40g</li>
-                        <li>Fibra: 40g</li>
-                        <li><b>Calorias:</b> 500 kcal </li>
-                    </ul>
-                    <h6><b>Preço:</b> 6.50</h6>
+                    <div class="list-group">
+                        <a class="list-group-item">Vitamina A: <span id="v1"></span></a>
+                        <a class="list-group-item">Vitamina B: <span id="v2"></span></a>
+                        <a class="list-group-item">Vitamina C: <span id="v3"></span></a>
+                        <a class="list-group-item">Fibra: <span id="v4"></span></a>
+                        <a class="list-group-item"><b>Calorias:</b> <span id="v5"></span> kcal </a>
+                    </div>
+                    <h6><b>Preço:</b> <span id="preco"></span> €</h6>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" onclick="location.href='Encomenda2.html'"class="btn btn-primary">Save changes</button>
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -467,7 +515,225 @@
     
 
     <script type="text/javascript" src="cordova.js"></script>
+    <script>
 
+        $(document).ready(function () {
+
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            $("#nome").html("" + currentUser.name);
+            $("#bits").html("" + currentUser.bits);
+
+            $("#close").click(function () {
+                $("#myModal").modal("hide");
+            });
+
+            function Bebida(nome, preco, descricao, frutas, valores) {
+                this.nome = nome;
+                this.preco = preco;
+                this.descricao = descricao;
+                this.frutas = frutas;
+                this.valores = valores;
+            }
+
+            var bebidas = new Array;
+
+            bebidas.push(new Bebida("Multivitaminas", 3.00, "Bebida com diversas frutas", ["Abacaxi", "Laranja", "Kiwi", "Pêssego"], ["20g", "15g", "50g", "30g", "150"]));
+            bebidas.push(new Bebida("Abacaxi", 1.50, "Bebida de abacaxi", ["Abacaxi"], ["40g", "25g", "30g", "50g", "140"]));
+            bebidas.push(new Bebida("Laranja", 1.50, "Bebida de laranja", ["Laranja"], ["20g", "35g", "40g", "20g", "160"]));
+            bebidas.push(new Bebida("Maçã e Morango", 2.00, "Bebida de maçã e morango", ["Maçã", "Morango"], ["10g", "25g", "30g", "60g", "145"]));
+            bebidas.push(new Bebida("Abacaxi e Maçã", 2.00, "Bebida de abacaxi e maçã", ["Abacaxi", "Maçã"], ["30g", "35g", "20g", "50g", "155"]));
+            bebidas.push(new Bebida("Abacaxi e Laranja", 2.00, "Bebida de abacaxi e laranja", ["Abacaxi", "Laranja"], ["20g", "45g", "50g", "30g", "162"]));
+            bebidas.push(new Bebida("Banana e Morango", 2.00, "Bebida de banana e morango", ["Banana", "Morango"], ["50g", "25g", "10g", "55g", "146"]));
+            bebidas.push(new Bebida("Manga e Laranja", 2.00, "Bebida de manga e laranja", ["Manga", "Laranja"], ["35g", "42g", "37g", "46g", "125"]));
+
+
+            $("#b1").click(function () {
+
+                $("#titulo").html(bebidas[0].nome);
+                $("#preco").html(bebidas[0].preco + ".00");
+                $("#descricao1").html(bebidas[0].descricao);
+                for (var i = 0; i < bebidas[0].frutas.length; i++) {
+                    $("#i" + (i + 1)).html(bebidas[0].frutas[i]);
+                }
+
+                for (var i = 0; i < bebidas[0].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[0].valores[i]);
+                }
+
+            });
+
+            $("#b2").click(function () {
+
+                $("#titulo").html(bebidas[1].nome);
+                $("#preco").html(bebidas[1].preco + "0");
+                $("#descricao1").html(bebidas[1].descricao);
+                $("#i1").html(bebidas[1].frutas[0]);
+                for (var i = 2; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[1].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[1].valores[i]);
+                }
+
+            });
+
+            $("#b3").click(function () {
+
+                $("#titulo").html(bebidas[2].nome);
+                $("#preco").html(bebidas[2].preco + "0");
+                $("#descricao1").html(bebidas[2].descricao);
+                $("#i1").html(bebidas[2].frutas[0]);
+                for (var i = 2; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            $("#b4").click(function () {
+
+                $("#titulo").html(bebidas[3].nome);
+                $("#preco").html(bebidas[3].preco + ".00");
+                $("#descricao1").html(bebidas[3].descricao);
+                $("#i1").html(bebidas[3].frutas[0]);
+                $("#i2").html(bebidas[3].frutas[1]);
+                for (var i = 3; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            $("#b5").click(function () {
+
+                $("#titulo").html(bebidas[4].nome);
+                $("#preco").html(bebidas[4].preco + ".00");
+                $("#descricao1").html(bebidas[4].descricao);
+                $("#i1").html(bebidas[4].frutas[0]);
+                $("#i2").html(bebidas[4].frutas[1]);
+                for (var i = 3; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            $("#b6").click(function () {
+
+                $("#titulo").html(bebidas[5].nome);
+                $("#preco").html(bebidas[5].preco + ".00");
+                $("#descricao1").html(bebidas[5].descricao);
+                $("#i1").html(bebidas[5].frutas[0]);
+                $("#i2").html(bebidas[5].frutas[1]);
+                for (var i = 3; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            $("#b7").click(function () {
+
+                $("#titulo").html(bebidas[6].nome);
+                $("#preco").html(bebidas[6].preco + ".00");
+                $("#descricao1").html(bebidas[6].descricao);
+                $("#i1").html(bebidas[6].frutas[0]);
+                $("#i2").html(bebidas[6].frutas[1]);
+                for (var i = 3; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            $("#b8").click(function () {
+
+                $("#titulo").html(bebidas[7].nome);
+                $("#preco").html(bebidas[7].preco + ".00");
+                $("#descricao1").html(bebidas[7].descricao);
+                $("#i1").html(bebidas[7].frutas[0]);
+                $("#i2").html(bebidas[7].frutas[1]);
+                for (var i = 3; i <= 4; i++) {
+                    $("#i" + i).removeClass("aparece").addClass("desaparece");
+                }
+
+                for (var i = 0; i < bebidas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(bebidas[2].valores[i]);
+                }
+
+            });
+
+            var currentOrder = JSON.parse(localStorage.getItem('currentOrder'));
+
+            $("#e1").click(function () {
+                currentOrder.drink = bebidas[0];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e2").click(function () {
+                currentOrder.drink = bebidas[1];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e3").click(function () {
+                currentOrder.drink = bebidas[2];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e4").click(function () {
+                currentOrder.drink = bebidas[3];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e5").click(function () {
+                currentOrder.drink = bebidas[4];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e6").click(function () {
+                currentOrder.drink = bebidas[5];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e7").click(function () {
+                currentOrder.drink = bebidas[6];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+            $("#e8").click(function () {
+                currentOrder.drink = bebidas[7];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "Encomenda2.html";
+            })
+
+        });
+
+    </script>
+    <script src="js/shoppingCart.js"></script>
 
 
 </body>

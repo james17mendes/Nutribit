@@ -1,229 +1,89 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-       
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8" />
-        <title></title>
+<head>
+    <meta charset="utf-8" />
+    <title>Nutribit</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Material design-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Scripts-->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+         $(document).ready(function () {
 
-        <!--Material design-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+             console.log("Document ready...")
 
-    </head>
-    <body>
-        <style>
+             // Construtor de uma pessoa
+             function Person(name, company, email, password, accountType, bits, pagamento, orders) {
+                 this.name = name;
+                 this.company = company;
+                 this.email = email;
+                 this.password = password;
+                 this.accountType = accountType;
+                 this.bits = bits;
+                 this.address = "";
+                 this.postaCode = "";
+                 this.phone = "";
+                 this.pagamento = pagamento;
+                 this.orders = orders;
+                 console.log("Creating a new person...")
+             }
 
+             // Construtor de uma sugestao
+             function Sugestao(sugestao, person) {
+                 this.sugestao = sugestao;
+                 this.person = person;
+                 console.log("\nCreating a new sugestion...")
+             }
 
-            /* Use a media query to add a breakpoint at 800px: */
-            @media screen and (max-width: 600px)  {
-                div.span3, div.span2 {
-                    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-                    font-size: 20px;
-                    text-align:center;
-                }
-            }
+             // Construtor de um código
+             function Codigo(codigo, valor) {
+                 this.codigo = codigo;
+                 this.valor = valor;
+             }
 
-            /* Use a media query to add a breakpoint at 800px: */
-            @media screen and (max-width: 600px) {
-                div.span4 {
-                   margin-bottom:240px;
-                }
-            }
+             // Pessoa teste
+             var p1 = new Person("Tiago Mendes", "Universidade de Aveiro", "tiagocmendes@ua.pt", "123456789", "cli", 200, "dinheiro", new Array);
+             var p2 = new Person("Cristiano Ronaldo", "Real Madrid", "cr7@halamadrid.es", "123456789", "cli", 100, "paypal", new Array);
+             var p3 = new Person("Joaquim Barreiros", "Nutribit", "joaquim@hotmail.com", "123456789", "rest", 0, "dinheiro", new Array);
+             var p4 = new Person("Administrador", "Nutribit", "admin@nutribit.com", "pwdeadmin123", "admin", 0, "dinheiro", new Array);
 
-            @media screen and (max-width: 600px) {
-                div.span1,div.span5 {
-                    display:none;
-                   
-                }
-            }
+             var users = new Array; // Array para guardar todos os utilizadores
+             users.push(p1); // Adicionar um utilizador teste
+             users.push(p2); // Adicionar um utilizador teste
+             users.push(p3); // Adicionar um utilizador teste
+             users.push(p4); // Adicionar um utilizador teste
+             localStorage.setItem('users', JSON.stringify(users)); // Guardar o array no localStorage
+             console.log("User test added to localStorage");
 
-            .span2 {
-                background-color: forestgreen;
-                color: white;
-                text-align: end;
-                font-size: 35px;
-                padding-top: 55px;
-                padding-bottom: 55px;
-                width: 44%;
-                border-radius: 15px 15px;
-                min-width: 44%
-            }
+             var sugestoes = new Array; // Array para guardar todas as sugestoes
+             sugestoes.push(new Sugestao("Primeira sugestao", p1)); // Adicionar uma sugestao teste
+             localStorage.setItem('sugestions', JSON.stringify(sugestoes)); // Guardar o array no localStorage
+             console.log("Sugestao teste added to localStorage");
 
-            .span1 {
-                color: forestgreen;
-                text-align: end
-            }
+             // Codigos promocionais
+             var codigos = new Array;
+             codigos.push(new Codigo(123456,200));
+             codigos.push(new Codigo(617844,300));
+             codigos.push(new Codigo(847392,100));
+             codigos.push(new Codigo(104957,400));
+             codigos.push(new Codigo(184739,100));
+             codigos.push(new Codigo(182874,50));
 
-            .span3 {
-                background-color: forestgreen;
-                color: white;
-                font-size: 40px;
-                padding-top: 55px;
-                padding-bottom: 55px;
-                width: 44%;
-                border-radius: 15px 15px
-            }
+             localStorage.setItem('codigos', JSON.stringify(codigos));
+             console.log("Codigo adicionado ao localStorage!");
 
-            .span4 {
-                margin-bottom: 120px
-            }
-
-            html {
-                margin: 0;
-                height: 100%;
-            }
-
-            body {
-               
-                height: 100%;
-                overflow: scroll;
-                
-            }
-
-            .jumbotron {
-                background-image: url("images/Capa.png");
-                background-color: #17234E;
-                margin-bottom: 0;
-                /*min-height: 100%;*/
-                background-repeat: no-repeat;
-                background-position: top center;
-                height:auto;
-                background-size: cover;
-                width:100%;
-            }
-
-            .fa1 {
-                font-size: 150px;
-            }
-
-            .buttons_div {
-                text-align:center;
-                margin-top:500px;
-            }
-
-            .div1 {
-                margin-top:40px
-            }
-
-
-           
-
-        </style>
-
-
-
-
-     
-
-
-            <nav  style="margin-bottom:0px" class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><img style="width:130px"  src="images/Logo.jpg"></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="Registar.html"> Sign Up</a></li>
-                            <li><a href="Login.html"> Sign in</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-
-
-            <div class="jumbotron banner" style="">
-                <div class="container">
-                    <div class="buttons_div" >
-                        <button style="background-color:white;color:forestgreen;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-                            About
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-            <div  class="col-lg-12" style="background-color:#404040">
-                <span style="color:forestgreen"><i style="text-align:end;margin-top:20px;margin-bottom:20px;" class="fa fa-star-o fa1 col-lg-2 col-lg-offset-1"></i></span><h3  style="color:white;margin-top:100px;" class="col-lg-7">A plataforma líder do mercado de encomendas de refeições saudáveis.</h3>
-
-
-            </div>
-
-            <div class="col-lg-12" style="background-color:white">
-                <span style=""><i style="text-align:end;margin-top:20px;margin-bottom:20px;font-size:100px" class="fa fa-arrow-right  col-lg-2 col-lg-offset-1"></i></span><h3 style="margin-top:50px;" class="col-lg-7">Com a Nutribit pode:</h3>
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-offset-3 col-lg-6 span2" style="">Planear refeições semanalmente</div>
-                    <div class="col-lg-3 span5" style="color:forestgreen"><i class="fa fa-calendar fa1" aria-hidden="true"></i></div>
-                </div>
-
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-3 span1" style=""><i class="fa fa-tag fa1"></i></div>
-                    <div class="col-lg-6 span3" style="">Utilizar códigos promocionais</div>
-                    
-                </div>
-
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-offset-3 col-lg-6 span2" style="">Receber a encomenda em casa</div>
-                    <div class="col-lg-3 span5" style="color:forestgreen"><i class="fa fa-home fa1" aria-hidden="true"></i></div>
-                </div>
-
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-3 span1" style=""><i class="fa fa-cutlery fa1" aria-hidden="true"></i></div>
-                    <div class="col-lg-6 span3" style="">Escolher e editar refeições</div>
-
-                </div>
-
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-offset-2 col-lg-6 span2" style="">Verificar o estado da sua encomenda</div>
-                    <div class="col-lg-3 span5" style="color:forestgreen"><i class="fa fa-calendar fa1" aria-hidden="true"></i></div>
-                </div>
-
-                <div class="col-lg-12 div1">
-                    <div class="col-lg-3 span1" style=""><i class="fa fa-tag fa1"></i></div>
-                    <div class="col-lg-6 span3 span4 " style="">Dar a sua opinião</div>
-
-                </div>
-
-            </div>
-
-        <nav  style="background-color:#404040;padding-top:20px" class="navbar  navbar-fixed-bottom">
-            <div class="container">
-                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-                    <div class="copyright">
-                        <p style="font-size:50px;color:green"><i class="fa fa-copyright "></i> <span style="font-size:30px;margin-bottom:20px">Nutribit 2018- All Rights Reserved</span></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
-                <div class="copyright">
-                    <a style="color:green;font-size:50px" href=""><i class="fa fa-facebook-official "></i></a>
-                    <a style="color:green;font-size:50px" href=""><i class="fa fa-twitter-square "></i></a>
-                    <a style="color:green;font-size:50px" href=""><i class="fa fa-instagram "></i></a>
-                    <a style="color:green;font-size:50px" href=""><i class="fa fa-facebook-official "></i></a>
-                </div>
-            </div>
-        </nav>
-            
-
-
-
-
-
-
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-       
-    </body>
+             window.location = "home.html";
+         });
+    </script>
+</body>
 </html>

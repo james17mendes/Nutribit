@@ -22,6 +22,10 @@
 
 
     <style>
+
+        a {
+            text-decoration: none !important;
+        }
         .mostra {
             display: normal;
         }
@@ -163,6 +167,70 @@
             margin-bottom: 50px;
             max-width: 100%
         }
+
+
+        .div1 {
+            background-color: forestgreen;
+            color: white;
+            margin-left: 150px;
+            width: 80%;
+            margin-top: 40px;
+            border-radius: 10px
+        }
+
+        .ch1 {
+            color: forestgreen;
+            margin-left: 150px
+        }
+
+        .ch2 {
+            width: 300px;
+            margin-left: 210px
+        }
+
+        .ch3 {
+            width: 400px;
+            margin-left: 160px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+
+        .ch4 {
+            color: white;
+            margin-left: 310px
+        }
+
+        @media screen and (max-width: 600px) {
+            .div1 {
+                margin-right: 10%;
+                margin-left: 10%;
+                margin-top: 70%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch1 {
+                margin-left: 0%;
+                text-align: center;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .ch2, .ch3 {
+                margin-left: 0%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .ch4 {
+                margin-left: 35%;
+            }
+        }
+
+
+
     </style>
 
 
@@ -170,11 +238,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button style="border-color:blue" type="button" class="navbar-toggle  navbar-dark collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only ">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button style="" type="button" class="navbar-right navbar-toggle  navbar-toggler ml-auto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class=" my-toggler"><i class="fa fa-bars"></i></span>
                 </button>
                 <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
@@ -338,29 +403,29 @@
         <span class="col-lg-2" style="font-size:40px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-left " aria-hidden="true"></i> <a href="Pagamento.html" style="color:white">Voltar</a></span>
     </div>
 
-    <div class="container col-lg-12" style="background-color:forestgreen;color:white;margin-left:150px;width:80%;margin-top:40px;border-radius:10px">
-        <h2 class="col-lg-10"><i style="font-size:50px;" class="fa fa-tag"></i> Códigos Promocionais</h2>
+    <div class="container col-lg-12 div1" style="">
+        <h3 class="col-lg-10"><i style="font-size:50px;" class="fa fa-tag"></i> Códigos Promocionais</h3>
         <span class="col-lg-2" style="font-size:30px;color:white;margin-top:30px"><i class="fa fa-arrow-circle-o-right " aria-hidden="true"></i> <a href="confirmacao.html" style="color:white">Avançar</a></span>
 
     </div>
 
-    <h3 class="col-lg-8" style="color:forestgreen;margin-left:150px">Introduza aqui os seus códigos promocionais:</h3>
+    <h3 class="col-lg-8 ch1" style="">Introduza aqui os seus códigos promocionais:</h3>
 
     <div class="col-lg-6" style="margin-top:100px">
 
         <div>
             <div class="imgcontainer">
-                <img src="images/Logo.jpg" alt="Avatar" style="width:300px;margin-left:210px">
+                <img src="images/Logo.jpg" class="ch2" alt="Avatar" style="">
             </div>
             <h5 class="col-lg-12" style="text-align:center;margin-top:50px;margin-bottom:50px">Por favor, introduza aqui o seu código promocional:</h5>
 
-            <p><input id="codigo" class="w3-input ip1" type="text" style="" placeholder="Código promocional (ex: 123456)"></p>
+            <p><input id="codigo" class="w3-input ip1 ch3" type="text" style="" placeholder="Código promocional (ex: 123456)"></p>
             <div style="margin-bottom:20px;" id="error" class="desaparece form-control-static text-danger bg-danger"> <i class="fa fa-exclamation-triangle"></i> Introduza um código promocional válido (ex: 123456) <br></div><br />
 
         </div>
 
         <div>
-            <button id="validar" style="background-color:dodgerblue;color:white;margin-left:310px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="validar" style="background-color:dodgerblue" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ch4">
                 Validar
             </button>
 
@@ -368,7 +433,7 @@
 
 
     </div>
-    <div class="col-lg-6" style="height:50%">
+    <div class="col-lg-6" style="height:50%;max-width:100%">
         <img style="padding-top:150px;" src="images/promocao.png">
 
     </div>

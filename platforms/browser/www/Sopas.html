@@ -22,6 +22,21 @@
 
 
     <style>
+        .mostra {
+            display: normal;
+        }
+
+        .esconde {
+            display: none;
+        }
+        .aparece {
+            display: normal;
+        }
+
+        .desaparece {
+            display: none;
+        }
+
         html {
             margin: 0;
             height: 100%;
@@ -140,6 +155,7 @@
                 opacity: 1;
             }
 
+
         .div1 {
             background-color: forestgreen;
             color: white;
@@ -155,24 +171,7 @@
             color: white;
             border-radius: 15px;
             background-color: #404040;
-        }
-
-        .navbar-toggler {
-            border-radius: 5px;
-            float: right;
-            position: relative;
-            float: right;
-            padding: 9px 10px;
-            margin-top: 8px;
-            margin-right: 15px;
-            margin-bottom: 8px;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='6' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-        }
-
-        .my-toggler {
+            transition: 0.5s;
         }
 
         @media screen and (max-width: 600px) {
@@ -197,11 +196,10 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><img src="images/Logo2.png"></a>
                 <button style="" type="button" class="navbar-right navbar-toggle  navbar-toggler ml-auto" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class=" my-toggler"><i class="fa fa-bars"></i></span>
                 </button>
-
+                <a class="navbar-brand"><img src="images/Logo2.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -216,26 +214,23 @@
 
 
 
-                        <a style="color:white;transition:0.5s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="images/sad.png" alt="Avatar" class="avatar"></a>
+                        <a style="color:white;transition:0.3s" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span id="nome"></span>       <img src="images/sad.png" alt="Avatar" class="avatar"></a>
 
 
 
                         <ul style="background-color:black" class="dropdown-menu dropdown-cart" role="menu">
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="perfil.html">Perfil <i class="fa fa-user" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="planear.html">As minhas refeições <i class="fa fa-cutlery" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
+                                <a style="color:white;float:right;transition:0.3s" href="promocao.html">Códigos Promocionais <i class="fa fa-tag"></i></a>
                             </li>
                             <li>
-                                <a style="color:white;float:right;transition:0.5s" href="index.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                                <a id="sair" style="color:white;float:right;transition:0.3s" href="home.html">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
                             </li>
-
-
-
                         </ul>
                     </li>
                 </ul>
@@ -246,74 +241,111 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px;transition:0.5s"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color:white;font-size:30px"> <span class="glyphicon glyphicon-shopping-cart"></span>  </a>
                         <ul class="dropdown-menu dropdown-cart" role="menu" style="background-color:black">
-                            <li>
+                            <li id="order1" class="mostra">
                                 <span class="item">
-                                    <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
+                                    <span class="item-info">
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName1">Não há pedidos</span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice1"></span>
                                         </span>
-                                    </span>
-                                    <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider1" class="divider mostra"></li>
+                            <li id="order2" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"> <span id="orderName2"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice2"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider2" class="divider esconde"></li>
+                            <li id="order3" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName3"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice3"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li>
+                            <li id="divider3" class="divider esconde"></li>
+                            <li id="order4" class="esconde">
                                 <span class="item">
                                     <span class="item-left">
-                                        <img src="http://lorempixel.com/50/50/" alt="" />
                                         <span class="item-info">
-                                            <span>Item name</span>
-                                            <span>23$</span>
+                                            <span style="color: white; font-size:15px;"><span id="orderName4"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice4"></span>
                                         </span>
                                     </span>
                                     <span class="item-right">
-                                        <button class="btn btn-xs btn-danger pull-right">x</button>
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
                                     </span>
                                 </span>
                             </li>
-                            <li class="divider"></li>
-                            <li><a class="text-center" href="">View Cart</a></li>
+                            <li id="divider4" class="divider esconde"></li>
+                            <li id="order5" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName5"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice5"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider5" class="divider esconde"></li>
+                            <li id="order6" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName6"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice6"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider6" class="divider esconde"></li>
+                            <li id="order7" class="esconde">
+                                <span class="item">
+                                    <span class="item-left">
+                                        <span class="item-info">
+                                            <span style="color: white; font-size:15px;"><span id="orderName7"></span></span>
+                                            <span style="color: white; font-size:15px;" id="orderPrice7"></span>
+                                        </span>
+                                    </span>
+                                    <span class="item-right">
+                                        <i style="font-size:40px; color:white;" class="fa fa-check-circle"></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li id="divider7" class="divider esconde"></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li style="margin-top:15px">
-                        <span style="color:white;font-size:20px">100 bits</span>
-                        <img style="width:50px" src="images/logo3.png">
+                        <span id="bits" style="color:white;font-size:20px"></span><span style="color:white;font-size:20px"> bits</span>
+                        <img style="width:40px" src="images/logo3.png">
                     </li>
 
 
@@ -330,42 +362,17 @@
     </div>
 
     <div class="container col-lg-12 div1" style="">
-        <h2 class="col-lg-10"><i style="font-size:50px;" class="material-icons">restaurant_menu</i> Massas</h2>
+        <h2 class="col-lg-10"><i style="font-size:50px;" class="material-icons">local_drink</i> Sopas</h2>
 
     </div>
 
-    <div class="container fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
-        <ul>
-            <li><b>>Ingredientes:</b></li>
-            <li>Frango</li>
-            <li>Ananás</li>
-            <li>Queijo</li>
-            <li>Batata doce</li>
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
-        <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='bebidas.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
-                Escolher
-            </button>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de tomate</h4>
+        <a id="b1" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
 
-        </div>
-
-    </div>
-    <div class="container fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
-        <ul>
-            <li><b>>Ingredientes:</b></li>
-            <li>Frango</li>
-            <li>Ananás</li>
-            <li>Queijo</li>
-            <li>Batata doce</li>
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e1" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -373,18 +380,12 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
-        <ul>
-            <li><b>>Ingredientes:</b></li>
-            <li>Frango</li>
-            <li>Ananás</li>
-            <li>Queijo</li>
-            <li>Batata doce</li>
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de cenoura</h4>
+        <a id="b2" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e2" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -392,18 +393,77 @@
 
     </div>
     <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
-        <h4 class="col-lg-10" style="padding-right:0px">Frango gainz </h4>
-        <a data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
-        <ul>
-            <li><b>>Ingredientes:</b></li>
-            <li>Frango</li>
-            <li>Ananás</li>
-            <li>Queijo</li>
-            <li>Batata doce</li>
-        </ul>
-        <h5 style="margin-left:20px">Preço: 6.50</h5>
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de alho-francês</h4>
+        <a id="b3" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
         <div class="col-lg-12">
-            <button style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" onclick="location.href='Menu.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+            <button id="e3" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+                Escolher
+            </button>
+
+        </div>
+
+    </div>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de cogumelos</h4>
+        <a id="b4" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
+        <div class="col-lg-12">
+            <button id="e4" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+                Escolher
+            </button>
+
+        </div>
+
+    </div>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de crouget</h4>
+        <a id="b5" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
+        <div class="col-lg-12">
+            <button id="e5" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+                Escolher
+            </button>
+
+        </div>
+
+    </div>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de ervilha</h4>
+        <a id="b6" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
+        <div class="col-lg-12">
+            <button id="e6" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+                Escolher
+            </button>
+
+        </div>
+
+    </div>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de abóbora</h4>
+        <a id="b7" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
+        <div class="col-lg-12">
+            <button id="e7" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
+                Escolher
+            </button>
+
+        </div>
+
+    </div>
+    <div class=" fade col-lg-2 col-lg-offset-1 div2" style="">
+        <h4 class="col-lg-10" style="padding-right:0px">Sopa de espinafres</h4>
+        <a id="b8" data-toggle="modal" data-target="#modal1" class="col-lg-2" style="color:dodgerblue;font-size:20px;margin-top:30px;padding-left:0"><i class="fa fa-question-circle-o"></i></a>
+
+        <h5 style="margin-left:20px">Preço: 2.50 €</h5>
+        <div class="col-lg-12">
+            <button id="e8" style="background-color:dodgerblue;color:white;margin-left:50px;margin-bottom:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent button_1  ">
                 Escolher
             </button>
 
@@ -411,13 +471,12 @@
 
     </div>
 
-
-    <!-- Modal 1 meal-->
+    <!-- Modal 1 bebida-->
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Frango gainz</h5>
+                    <h5 class="modal-title" id="titulo"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -425,35 +484,223 @@
                 <div class="modal-body">
                     <img style="width:100%" src="images/frango.jpg">
                     <div style="margin-top:20px" id="descrição">
-                        <h8>Frango saudável com batata doce</h8>
+                        <h8><b>Descrição: </b> <span id="descricao1"></span></h8>
                     </div>
                     <h6>Ingredientes</h6>
-                    <div class="form-check  col-lg-12 ">
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Frango<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Anánas<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Queijo<br>
-                        <input class="form-check-input col-lg-12" type="checkbox" id="inlineCheckbox1" value="option1">Batata Doce<br>
+                    <div class="list-group">
+                        <a id="i1" href="#" class="list-group-item aparece"></a>
                     </div>
                     <h6>Informação nutricional</h6>
-                    <ul>
-                        <li>Proteína: 40g</li>
-                        <li>Gordura: 40g</li>
-                        <li>Hidratos de Carbono: 40g</li>
-                        <li>Fibra: 40g</li>
-                        <li><b>Calorias:</b> 500 kcal </li>
-                    </ul>
-                    <h6><b>Preço:</b> 6.50</h6>
+                    <div class="list-group">
+                        <a class="list-group-item">Vitamina A: <span id="v1"></span></a>
+                        <a class="list-group-item">Vitamina B: <span id="v2"></span></a>
+                        <a class="list-group-item">Vitamina C: <span id="v3"></span></a>
+                        <a class="list-group-item">Fibra: <span id="v4"></span></a>
+                        <a class="list-group-item"><b>Calorias:</b> <span id="v5"></span> kcal </a>
+                    </div>
+                    <h6><b>Preço:</b> <span id="preco"></span> €</h6>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" onclick="location.href='bebidas.html'" class="btn btn-primary">Save changes</button>
+                    <button id="close" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
 
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            $("#nome").html("" + currentUser.name);
+            $("#bits").html("" + currentUser.bits);
+
+            $("#close").click(function () {
+                $("#myModal").modal("hide");
+            });
+
+            function Sopa(nome, preco, descricao, ingredientes, valores) {
+                this.nome = nome;
+                this.preco = preco;
+                this.descricao = descricao;
+                this.ingredientes = ingredientes;
+                this.valores = valores;
+            }
+
+            var sopas = new Array;
+
+            sopas.push(new Sopa("Sopa de tomate", 4.50, "Sopa à base de tomate", ["Tomate"], ["20g", "15g", "50g", "30g", "150"]));
+            sopas.push(new Sopa("Sopa de cenoura", 4.50, "Sopa à base de cenoura", ["Cenoura"], ["40g", "25g", "30g", "50g", "140"]));
+            sopas.push(new Sopa("Sopa de alho-francês", 4.50, "Sopa à base de alho-francês", ["Alho-francês"], ["20g", "35g", "40g", "20g", "160"]));
+            sopas.push(new Sopa("Sopa de cogumelos", 4.50, "Sopa à base de cogumelos", ["Cogumelos"], ["10g", "25g", "30g", "60g", "145"]));
+            sopas.push(new Sopa("Sopa de crouget", 4.50, "Sopa à base de crouget", ["Crouget"], ["30g", "35g", "20g", "50g", "155"]));
+            sopas.push(new Sopa("Sopa de ervilha", 4.50, "Sopa à base de ervilha", ["Ervilha"], ["20g", "45g", "50g", "30g", "162"]));
+            sopas.push(new Sopa("Sopa de abóbora", 4.50, "Sopa à base de abóbora", ["Abóbora"], ["50g", "25g", "10g", "55g", "146"]));
+            sopas.push(new Sopa("Sopa de espinafres", 4.50, "Sopa à base de espinafres", ["Espinafre"], ["35g", "42g", "37g", "46g", "125"]));
+
+
+            $("#b1").click(function () {
+
+                $("#titulo").html(sopas[0].nome);
+                $("#preco").html(sopas[0].preco + "0");
+                $("#descricao1").html(sopas[0].descricao);
+                $("#i1").html(sopas[0].igredientes[0]);
+
+                for (var i = 0; i < sopas[0].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[0].valores[i]);
+                }
+
+            });
+
+            $("#b2").click(function () {
+
+                $("#titulo").html(sopas[1].nome);
+                $("#preco").html(sopas[1].preco + "0");
+                $("#descricao1").html(sopas[1].descricao);
+                $("#i1").html(sopas[1].igredientes[0]);
+
+                for (var i = 0; i < sopas[1].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[1].valores[i]);
+                }
+
+            });
+
+            $("#b3").click(function () {
+
+                $("#titulo").html(sopas[2].nome);
+                $("#preco").html(sopas[2].preco + "0");
+                $("#descricao1").html(sopas[2].descricao);
+                $("#i1").html(sopas[2].igredientes[0]);
+
+                for (var i = 0; i < sopas[2].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[2].valores[i]);
+                }
+
+            });
+
+            $("#b4").click(function () {
+
+                $("#titulo").html(sopas[3].nome);
+                $("#preco").html(sopas[3].preco + "0");
+                $("#descricao1").html(sopas[3].descricao);
+                $("#i1").html(sopas[3].igredientes[0]);
+
+                for (var i = 0; i < sopas[3].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[3].valores[i]);
+                }
+
+            });
+
+            $("#b5").click(function () {
+
+                $("#titulo").html(sopas[4].nome);
+                $("#preco").html(sopas[4].preco + "0");
+                $("#descricao1").html(sopas[4].descricao);
+                $("#i1").html(sopas[4].igredientes[0]);
+
+                for (var i = 0; i < sopas[4].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[4].valores[i]);
+                }
+
+            });
+
+            $("#b6").click(function () {
+
+                $("#titulo").html(sopas[5].nome);
+                $("#preco").html(sopas[5].preco + "0");
+                $("#descricao1").html(sopas[5].descricao);
+                $("#i1").html(sopas[5].igredientes[0]);
+
+                for (var i = 0; i < sopas[5].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[5].valores[i]);
+                }
+
+            });
+
+            $("#b7").click(function () {
+
+                $("#titulo").html(sopas[6].nome);
+                $("#preco").html(sopas[6].preco + "0");
+                $("#descricao1").html(sopas[6].descricao);
+                $("#i1").html(sopas[6].igredientes[0]);
+
+                for (var i = 0; i < sopas[6].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[6].valores[i]);
+                }
+
+            });
+
+            $("#b8").click(function () {
+
+                $("#titulo").html(sopas[7].nome);
+                $("#preco").html(sopas[7].preco + "0");
+                $("#descricao1").html(sopas[7].descricao);
+                $("#i1").html(sopas[7].igredientes[0]);
+
+                for (var i = 0; i < sopas[7].valores.length; i++) {
+                    $("#v" + (i + 1)).html(sopas[7].valores[i]);
+                }
+
+            });
+
+            var currentOrder = JSON.parse(localStorage.getItem('currentOrder'));
+
+            $("#e1").click(function () {
+                currentOrder.meal = sopas[0];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e2").click(function () {
+                currentOrder.meal = sopas[1];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e3").click(function () {
+                currentOrder.meal = sopas[2];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e4").click(function () {
+                currentOrder.meal = sopas[3];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e5").click(function () {
+                currentOrder.meal = sopas[4];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e6").click(function () {
+                currentOrder.meal = sopas[5];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e7").click(function () {
+                currentOrder.meal = sopas[6];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+            $("#e8").click(function () {
+                currentOrder.meal = sopas[7];
+                localStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+                window.location = "bebidas.html";
+            })
+
+        });
+
+    </script>
+    <script src="js/shoppingCart.js"></script>
 
 
 </body>

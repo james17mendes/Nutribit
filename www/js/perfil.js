@@ -398,7 +398,7 @@
             users = JSON.parse(localStorage.getItem('users'));
             for (var i = 0; i < users.length; i++) {
                 if (users[i].email == currentUser.email) {
-                    users.pop(users[i]);
+                    users.splice(users[i], 1);
                     localStorage.removeItem('currentUser');
                     break;
                 }
@@ -409,9 +409,13 @@
             $("#myModal3").modal("show");
 
             $("#close").click(function () {
-                window.location = "Feedback.html";
+                window.location = "home.html";
             });
-
+			
+			window.setTimeout(redirecionar, 3000);
+                function redirecionar() {
+                    window.location = "home.html";
+                }
         }
 
         
